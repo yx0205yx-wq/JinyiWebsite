@@ -1133,7 +1133,7 @@ function renderDynamicContent(lang) {
         ${row
           .map(
             (cell, cellIndex) => `
-              <div>
+              <div ${index === 0 ? "" : `data-label="${dict.equipmentColumns[cellIndex]}"`}>
                 ${
                   index === 0 || cellIndex < 3
                     ? `<strong>${cell || "-"}</strong>`
