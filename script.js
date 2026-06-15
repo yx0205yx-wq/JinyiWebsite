@@ -7,6 +7,7 @@ const contact = {
   whatsappUrl: "https://wa.me/8613515525036",
   address:
     "Room 101, No.11, Xinwei East Seventh Lane, Shixia Village, Dalang Town, Dongguan City, China",
+  addressZh: "广东省东莞市大朗镇石厦新围东七巷11号",
 };
 
 const sharedImages = {
@@ -363,7 +364,7 @@ const content = {
         "请提供 2D/3D 图纸、材料、数量、公差、表面处理与交期要求，便于快速评估。",
       email: `Email: ${contact.email}`,
       whatsapp: `WhatsApp: ${contact.whatsapp}`,
-      address: `Address: ${contact.address}`,
+      address: `地址：${contact.addressZh}`,
     },
     form: {
       name: "姓名 / 公司",
