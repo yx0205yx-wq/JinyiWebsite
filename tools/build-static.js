@@ -8,6 +8,7 @@ const files = [
   "index.html",
   "styles.css",
   "script.js",
+  "lightbox.js",
   "robots.txt",
   "sitemap.xml",
   "404.html",

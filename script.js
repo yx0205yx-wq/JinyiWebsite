@@ -1312,12 +1312,33 @@ const lightboxImage = lightbox?.querySelector("img");
 const lightboxCaption = lightbox?.querySelector("figcaption");
 const lightboxClose = document.querySelector("[data-lightbox-close]");
 
+function lightboxSource(image) {
+  const raw = image.dataset.full || image.currentSrc || image.getAttribute("src") || image.src;
+  if (!raw) return "";
+  return new URL(raw, window.location.href).href;
+}
+
 function openLightbox(image) {
   if (!lightbox || !lightboxImage || !lightboxCaption) return;
   const figure = image.closest("figure");
   const caption = figure?.querySelector("figcaption")?.textContent?.trim() || image.alt || "";
+  const source = lightboxSource(image);
+  if (!source) return;
 
-  lightboxImage.src = image.currentSrc || image.src;
+  lightbox.classList.add("is-loading");
+  lightbox.classList.remove("has-error");
+  lightboxImage.onload = () => {
+    lightbox.classList.remove("is-loading");
+    lightbox.classList.remove("has-error");
+  };
+  lightboxImage.onerror = () => {
+    lightbox.classList.remove("is-loading");
+    lightbox.classList.add("has-error");
+    lightboxCaption.textContent = "Image could not be loaded. Please try opening it again.";
+  };
+  lightboxImage.removeAttribute("width");
+  lightboxImage.removeAttribute("height");
+  lightboxImage.src = source;
   lightboxImage.alt = image.alt || caption;
   lightboxCaption.textContent = caption;
   lightbox.hidden = false;
@@ -1328,7 +1349,10 @@ function openLightbox(image) {
 function closeLightbox() {
   if (!lightbox || !lightboxImage) return;
   lightbox.hidden = true;
-  lightboxImage.src = "";
+  lightbox.classList.remove("is-loading", "has-error");
+  lightboxImage.onload = null;
+  lightboxImage.onerror = null;
+  lightboxImage.removeAttribute("src");
   document.body.classList.remove("lightbox-open");
 }
 
