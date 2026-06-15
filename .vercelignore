@@ -1,0 +1,11 @@
+dist
+previews
+assets/docs
+assets/ppt
+assets/brochure-pages
+assets/brochure-contact-sheet.jpg
+assets/precision-machining-hero.png
+extract_company_sources.py
+extract_pdf_images.py
+source-extract.json
+test_site_cdp.js
