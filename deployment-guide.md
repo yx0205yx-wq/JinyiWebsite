@@ -10,7 +10,7 @@ Replace these placeholders before the final public launch:
   - Replace with the real production domain in HTML canonical tags, schema markup, `sitemap.xml`, and `robots.txt`.
 - `mzdqkjbl`
   - Replace with the real Formspree form ID after creating the Formspree form.
-  - Configure Formspree notifications to send inquiries to `dgjinyi888@163.com`.
+  - Configure Formspree notifications to send inquiries to `yx0205yx@gmail.com`.
 - `G-XXXXXXXXXX`
   - Replace with the real Google Analytics Measurement ID.
 
@@ -88,7 +88,7 @@ Drawing instruction shown on the site:
 
 Contact channels:
 
-- Email: `dgjinyi888@163.com`
+- Email: `yx0205yx@gmail.com`
 - WhatsApp: `+86 13515525036`
 
 ## SEO Checklist
@@ -99,6 +99,6 @@ Before launch:
 - Confirm `robots.txt` points to the real sitemap URL.
 - Confirm `sitemap.xml` contains the final canonical URLs.
 - Confirm all important pages have `index, follow`.
-- Confirm Formspree form submissions arrive at `dgjinyi888@163.com`.
+- Confirm Formspree form submissions arrive at `yx0205yx@gmail.com`.
 - Confirm Google Analytics is receiving data.
 - Submit sitemap to Google Search Console.

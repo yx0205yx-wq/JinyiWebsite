@@ -2,7 +2,7 @@ const LANG_KEY = "jinyi-site-language";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzdqkjbl";
 
 const contact = {
-  email: "dgjinyi888@163.com",
+  email: "yx0205yx@gmail.com",
   whatsapp: "+86 13515525036",
   whatsappUrl: "https://wa.me/8613515525036",
   address:
