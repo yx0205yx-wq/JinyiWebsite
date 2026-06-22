@@ -31,6 +31,7 @@ const assetFiles = [
   "assets/company/round-pin-components.jpg",
   "assets/company/ceramic-component.jpg",
   "assets/company/precision-plate-components.jpg",
+  "assets/real-photos/pg-profile-ground-components.png",
   "assets/real-photos/finished-mold-plates.jpg",
   "assets/real-photos/edm-workshop-line.jpg",
   "assets/real-photos/edm-workshop-overview.jpg",

@@ -46,6 +46,7 @@ const equipmentImages = {
 };
 
 const imageMeta = {
+  "assets/real-photos/pg-profile-ground-components.png": [631, 425],
   "assets/real-photos/finished-mold-plates.jpg": [1279, 1706],
   "assets/real-photos/edm-workshop-line.jpg": [1440, 810],
   "assets/company/profile-ground-inserts.jpg": [904, 603],
@@ -103,7 +104,7 @@ const content = {
         "聚焦高精度研磨、细线切割与镜面放电加工，服务电子连接器、精密组件及自动化零件客户。",
       primaryCta: "发送图纸询价",
       secondaryCta: "查看加工能力",
-      photoMain: "精密板件与零部件",
+      photoMain: "PG 成型研磨异形精密零部件",
       photoSide: "恒温 EDM 加工现场",
     },
     metrics: [
@@ -414,7 +415,7 @@ const content = {
         "高精度研削、細線ワイヤーカット、鏡面放電加工を軸に、コネクタ、精密部品、自動化部品向けの加工に対応します。",
       primaryCta: "図面で見積依頼",
       secondaryCta: "加工能力を見る",
-      photoMain: "精密プレートと精密部品",
+      photoMain: "PG成形研削の精密異形部品",
       photoSide: "恒温 EDM 加工現場",
     },
     metrics: [
@@ -725,7 +726,7 @@ const content = {
         "Focused on high-precision grinding, fine wire EDM and mirror EDM for connector, precision component and automation customers.",
       primaryCta: "Send Drawings",
       secondaryCta: "View Capability",
-      photoMain: "Precision plates and components",
+      photoMain: "PG profile-ground precision components",
       photoSide: "Temperature-controlled EDM workshop",
     },
     metrics: [
