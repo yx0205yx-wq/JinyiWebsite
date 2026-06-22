@@ -38,7 +38,6 @@ const assetFiles = [
   "assets/real-photos/okamoto-grinding-machine.jpg",
   "assets/real-photos/small-wire-cut-parts.jpg",
   "assets/real-photos/tungsten-forming-parts.jpg",
-  "assets/real-photos/plastic-mold-plates.jpg",
   "assets/equipment/pg-profile-grinding-workshop.jpg",
   "assets/equipment/pg-profile-grinding-machine.jpg",
   "assets/equipment/wire-edm-line.jpg",

@@ -18,7 +18,6 @@ const sharedImages = {
   plates: "assets/company/precision-plate-components.jpg",
   smallWire: "assets/real-photos/small-wire-cut-parts.jpg",
   tungsten: "assets/real-photos/tungsten-forming-parts.jpg",
-  plastic: "assets/real-photos/plastic-mold-plates.jpg",
 };
 
 const equipmentImages = {
@@ -56,7 +55,6 @@ const imageMeta = {
   "assets/company/precision-plate-components.jpg": [1717, 1147],
   "assets/real-photos/small-wire-cut-parts.jpg": [600, 444],
   "assets/real-photos/tungsten-forming-parts.jpg": [600, 444],
-  "assets/real-photos/plastic-mold-plates.jpg": [600, 444],
   "assets/equipment/pg-profile-grinding-workshop.jpg": [689, 339],
   "assets/equipment/pg-profile-grinding-machine.jpg": [499, 667],
   "assets/equipment/wire-edm-line.jpg": [745, 655],
@@ -263,7 +261,6 @@ const content = {
       ["精密板件", "小型精密 plate、孔位与型腔加工。", sharedImages.plates],
       ["细线切割微小件", "细线割、窄槽与微小轮廓加工。", sharedImages.smallWire],
       ["钨钢成形零件", "钨钢成形研磨与高耐磨部件。", sharedImages.tungsten],
-      ["树脂成形相关零件", "塑胶成形 core / cavity 与相关零件。", sharedImages.plastic],
     ],
     blade: {
       eyebrow: "Micro Blade Capability",
@@ -574,7 +571,6 @@ const content = {
       ["精密プレート", "小型精密プレート、穴位置、キャビティ加工。", sharedImages.plates],
       ["細線ワイヤー微細部品", "細線加工、狭溝、微小輪郭加工。", sharedImages.smallWire],
       ["超硬成形部品", "超硬成形研削、高耐摩耗部品。", sharedImages.tungsten],
-      ["樹脂成形関連部品", "プラスチック成形 core / cavity 関連部品。", sharedImages.plastic],
     ],
     blade: {
       eyebrow: "Micro Blade Capability",
@@ -885,7 +881,6 @@ const content = {
       ["Precision Plates", "Small precision plates, hole positions and cavity processing.", sharedImages.plates],
       ["Fine Wire-Cut Micro Parts", "Fine wire EDM, narrow slots and micro contour processing.", sharedImages.smallWire],
       ["Carbide Forming Parts", "Carbide form grinding and high-wear-resistance components.", sharedImages.tungsten],
-      ["Resin-Molding Related Parts", "Plastic molding core / cavity and related components.", sharedImages.plastic],
     ],
     blade: {
       eyebrow: "Micro Blade Capability",
