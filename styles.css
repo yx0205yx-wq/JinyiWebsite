@@ -46,6 +46,24 @@ img {
   max-width: 100%;
 }
 
+/* 【优化说明】只在资源加载失败时启用兜底样式，正常图片的原有视觉效果不受影响。 */
+.image-load-failed {
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0)),
+    var(--paper-soft);
+  object-fit: contain !important;
+}
+
+.empty-state {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  padding: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 a {
   color: inherit;
   text-decoration: none;

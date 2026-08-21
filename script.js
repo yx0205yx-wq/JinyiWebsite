@@ -1030,8 +1030,32 @@ const selectors = {
   blog: document.querySelector("#blog-grid"),
 };
 
+const i18nNodes = [...document.querySelectorAll("[data-i18n]")];
+const languageButtons = [...document.querySelectorAll("[data-lang]")];
+const siteNavLinks = [...document.querySelectorAll(".site-nav a")];
+const rfqForm = document.querySelector("[data-rfq-form]");
+const FORM_TIMEOUT_MS = 15000;
+let currentLanguage = "";
+
+// 【优化说明】统一封装存储、转义和渲染入口，避免重复 DOM 查询，并降低动态 HTML 注入风险。
+function readStoredLanguage() {
+  try {
+    return localStorage.getItem(LANG_KEY);
+  } catch (error) {
+    return "";
+  }
+}
+
+function writeStoredLanguage(lang) {
+  try {
+    localStorage.setItem(LANG_KEY, lang);
+  } catch (error) {
+    // Storage can be blocked in private browsing; the current page still works without persistence.
+  }
+}
+
 function getInitialLanguage() {
-  const saved = localStorage.getItem(LANG_KEY);
+  const saved = readStoredLanguage();
   if (saved && content[saved]) return saved;
   return "en";
 }
@@ -1040,18 +1064,27 @@ function setTextContent(lang) {
   const dict = content[lang];
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
   document.title = dict.metaTitle;
-  document.querySelectorAll("[data-i18n]").forEach((node) => {
+  i18nNodes.forEach((node) => {
     const value = node.dataset.i18n.split(".").reduce((obj, key) => obj?.[key], dict);
     if (typeof value === "string") node.textContent = value;
   });
 }
 
-function escapeAttr(value) {
+function escapeHtml(value) {
   return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function escapeAttr(value) {
+  return escapeHtml(value).replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+function safeHref(value) {
+  const href = String(value || "#").trim();
+  if (!href || /^(?:javascript|data|vbscript):/i.test(href)) return "#";
+  return escapeAttr(href);
 }
 
 function imageAttrs(src, alt) {
@@ -1059,9 +1092,33 @@ function imageAttrs(src, alt) {
   return `src="${escapeAttr(src)}" alt="${escapeAttr(alt)}" width="${width}" height="${height}" loading="lazy" decoding="async"`;
 }
 
+function joinHtml(items, renderer) {
+  return items.map(renderer).join("");
+}
+
 function renderList(container, items, renderer) {
   if (!container) return;
-  container.innerHTML = items.map(renderer).join("");
+  if (!Array.isArray(items) || items.length === 0) {
+    container.innerHTML = `<p class="empty-state">Content is being prepared.</p>`;
+    return;
+  }
+  container.innerHTML = joinHtml(items, renderer);
+}
+
+function setupImageFallbacks(scope = document) {
+  scope.querySelectorAll("img").forEach((image) => {
+    if (image.dataset.fallbackReady) return;
+    image.dataset.fallbackReady = "true";
+    image.addEventListener(
+      "error",
+      () => {
+        image.classList.add("image-load-failed");
+        image.removeAttribute("srcset");
+        if (!image.alt) image.alt = "Image unavailable";
+      },
+      { once: true },
+    );
+  });
 }
 
 function renderDynamicContent(lang) {
@@ -1070,13 +1127,13 @@ function renderDynamicContent(lang) {
   renderList(
     selectors.metrics,
     dict.metrics,
-    ([value, label]) => `<div class="metric"><dt>${label}</dt><dd>${value}</dd></div>`,
+    ([value, label]) => `<div class="metric"><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`,
   );
 
   renderList(
     selectors.trust,
     dict.trust,
-    ([value, label]) => `<div class="trust-item"><strong>${value}</strong><span>${label}</span></div>`,
+    ([value, label]) => `<div class="trust-item"><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span></div>`,
   );
 
   renderList(
@@ -1085,8 +1142,8 @@ function renderDynamicContent(lang) {
     ([title, desc], index) => `
       <article class="strength-card">
         <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
-        <h3>${title}</h3>
-        <p>${desc}</p>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(desc)}</p>
       </article>
     `,
   );
@@ -1098,11 +1155,11 @@ function renderDynamicContent(lang) {
       <article class="capability-card">
         <div>
           <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.desc)}</p>
         </div>
         <div class="capability-meta">
-          ${item.meta.map((meta) => `<span>${meta}</span>`).join("")}
+          ${joinHtml(item.meta, (meta) => `<span>${escapeHtml(meta)}</span>`)}
         </div>
       </article>
     `,
@@ -1112,11 +1169,11 @@ function renderDynamicContent(lang) {
     selectors.services,
     dict.serviceLinks,
     ([title, desc, href], index) => `
-      <a class="service-link-card" href="${href}">
+      <a class="service-link-card" href="${safeHref(href)}">
         <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
-        <h3>${title}</h3>
-        <p>${desc}</p>
-        <strong>${lang === "en" ? "View Service" : lang === "ja" ? "詳しく見る" : "查看详情"}</strong>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(desc)}</p>
+        <strong>${escapeHtml(lang === "en" ? "View Service" : lang === "ja" ? "詳しく見る" : "查看详情")}</strong>
       </a>
     `,
   );
@@ -1129,11 +1186,11 @@ function renderDynamicContent(lang) {
         ${row
           .map(
             (cell, cellIndex) => `
-              <div ${index === 0 ? "" : `data-label="${dict.equipmentColumns[cellIndex]}"`}>
+              <div ${index === 0 ? "" : `data-label="${escapeAttr(dict.equipmentColumns[cellIndex] || "")}"`}>
                 ${
                   index === 0 || cellIndex < 3
-                    ? `<strong>${cell || "-"}</strong>`
-                    : `<span>${cell || "-"}</span>`
+                    ? `<strong>${escapeHtml(cell || "-")}</strong>`
+                    : `<span>${escapeHtml(cell || "-")}</span>`
                 }
               </div>
             `,
@@ -1153,9 +1210,9 @@ function renderDynamicContent(lang) {
             <img ${imageAttrs(image, title)} />
           </div>
           <div>
-            <span>${category}</span>
-            <h3>${title}</h3>
-            <p>${desc}</p>
+            <span>${escapeHtml(category)}</span>
+            <h3>${escapeHtml(title)}</h3>
+            <p>${escapeHtml(desc)}</p>
           </div>
         </figure>
       </article>
@@ -1168,8 +1225,8 @@ function renderDynamicContent(lang) {
     ([title, desc], index) => `
       <article class="quality-card">
         <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
-        <h3>${title}</h3>
-        <p>${desc}</p>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(desc)}</p>
       </article>
     `,
   );
@@ -1179,8 +1236,8 @@ function renderDynamicContent(lang) {
     dict.inspections,
     ([title, desc]) => `
       <article class="inspection-card">
-        <h3>${title}</h3>
-        <p>${desc}</p>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(desc)}</p>
       </article>
     `,
   );
@@ -1192,8 +1249,8 @@ function renderDynamicContent(lang) {
       <article class="product-card">
         <figure><img ${imageAttrs(image, title)} /></figure>
         <div>
-          <h3>${title}</h3>
-          <p>${desc}</p>
+          <h3>${escapeHtml(title)}</h3>
+          <p>${escapeHtml(desc)}</p>
         </div>
       </article>
     `,
@@ -1204,8 +1261,8 @@ function renderDynamicContent(lang) {
     dict.bladeRows,
     ([size, length]) => `
       <div class="blade-row">
-        <strong>${size}</strong>
-        <span>${length}</span>
+        <strong>${escapeHtml(size)}</strong>
+        <span>${escapeHtml(length)}</span>
       </div>
     `,
   );
@@ -1215,9 +1272,9 @@ function renderDynamicContent(lang) {
     dict.materialCards,
     ([title, rows]) => `
       <article class="material-card">
-        <h3>${title}</h3>
+        <h3>${escapeHtml(title)}</h3>
         <ul>
-          ${rows.map((row) => `<li>${row}</li>`).join("")}
+          ${joinHtml(rows, (row) => `<li>${escapeHtml(row)}</li>`)}
         </ul>
       </article>
     `,
@@ -1228,11 +1285,11 @@ function renderDynamicContent(lang) {
     dict.caseStudyCards,
     (item) => `
       <article class="case-study-card">
-        <span>${item.tag}</span>
-        <h3>${item.title}</h3>
-        <p>${item.desc}</p>
+        <span>${escapeHtml(item.tag)}</span>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.desc)}</p>
         <ul>
-          ${item.points.map((point) => `<li>${point}</li>`).join("")}
+          ${joinHtml(item.points, (point) => `<li>${escapeHtml(point)}</li>`)}
         </ul>
       </article>
     `,
@@ -1241,7 +1298,7 @@ function renderDynamicContent(lang) {
   renderList(
     selectors.customers,
     dict.customersList,
-    (name) => `<div class="customer-card">${name}</div>`,
+    (name) => `<div class="customer-card">${escapeHtml(name)}</div>`,
   );
 
   renderList(
@@ -1249,8 +1306,8 @@ function renderDynamicContent(lang) {
     dict.faqItems,
     ([question, answer]) => `
       <details class="faq-item">
-        <summary>${question}</summary>
-        <p>${answer}</p>
+        <summary>${escapeHtml(question)}</summary>
+        <p>${escapeHtml(answer)}</p>
       </details>
     `,
   );
@@ -1259,22 +1316,25 @@ function renderDynamicContent(lang) {
     selectors.blog,
     dict.blogCards,
     ([title, desc, href]) => `
-      <a class="blog-card" href="${href}">
-        <span>${lang === "en" ? "Article" : lang === "ja" ? "記事" : "文章"}</span>
-        <h3>${title}</h3>
-        <p>${desc}</p>
+      <a class="blog-card" href="${safeHref(href)}">
+        <span>${escapeHtml(lang === "en" ? "Article" : lang === "ja" ? "記事" : "文章")}</span>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(desc)}</p>
       </a>
     `,
   );
 }
 
-function setLanguage(lang) {
+function setLanguage(lang, options = {}) {
   if (!content[lang]) return;
+  if (!options.force && currentLanguage === lang) return;
+  currentLanguage = lang;
   const dict = content[lang];
-  localStorage.setItem(LANG_KEY, lang);
+  writeStoredLanguage(lang);
   setTextContent(lang);
   renderDynamicContent(lang);
-  document.querySelectorAll("[data-lang]").forEach((button) => {
+  setupImageFallbacks();
+  languageButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
   });
   document.querySelector(".menu-button")?.setAttribute(
@@ -1284,7 +1344,7 @@ function setLanguage(lang) {
   document.querySelector("[data-lightbox-close]")?.setAttribute("aria-label", dict.lightbox.close);
 }
 
-document.querySelectorAll("[data-lang]").forEach((button) => {
+languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
@@ -1296,7 +1356,7 @@ menuButton?.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(open));
 });
 
-document.querySelectorAll(".site-nav a").forEach((link) => {
+siteNavLinks.forEach((link) => {
   link.addEventListener("click", () => {
     header.classList.remove("is-open");
     menuButton?.setAttribute("aria-expanded", "false");
@@ -1371,9 +1431,9 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-document.querySelector("[data-rfq-form]")?.addEventListener("submit", async (event) => {
+rfqForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const lang = localStorage.getItem(LANG_KEY) || getInitialLanguage();
+  const lang = currentLanguage || getInitialLanguage();
   const dict = content[lang];
   const form = event.currentTarget;
   const status = form.querySelector("[data-form-status]");
@@ -1390,6 +1450,9 @@ document.querySelector("[data-rfq-form]")?.addEventListener("submit", async (eve
 
   const formData = new FormData(form);
   formData.set("_subject", dict.form.subject);
+  // 【优化说明】表单提交增加超时控制，避免网络异常时按钮长期处于不可点击状态。
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), FORM_TIMEOUT_MS);
 
   if (submitButton) submitButton.disabled = true;
   if (status) {
@@ -1402,6 +1465,7 @@ document.querySelector("[data-rfq-form]")?.addEventListener("submit", async (eve
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
+      signal: controller.signal,
     });
 
     if (!response.ok) throw new Error(`Formspree responded with ${response.status}`);
@@ -1417,8 +1481,10 @@ document.querySelector("[data-rfq-form]")?.addEventListener("submit", async (eve
       status.dataset.state = "error";
     }
   } finally {
+    window.clearTimeout(timeoutId);
     if (submitButton) submitButton.disabled = false;
   }
 });
 
-setLanguage(getInitialLanguage());
+// 【优化说明】首屏初始化只渲染一次，后续重复点击当前语言不会触发额外 DOM 更新。
+setLanguage(getInitialLanguage(), { force: true });
