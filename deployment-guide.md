@@ -2,17 +2,14 @@
 
 This project is a static production website for Dongguan Jinyi Precision Technology Co., Ltd.
 
-## Required Manual Replacements Before Launch
+## Current Production Configuration
 
-Replace these placeholders before the final public launch:
-
-- `https://www.jinyiprecision.com`
-  - Replace with the real production domain in HTML canonical tags, schema markup, `sitemap.xml`, and `robots.txt`.
-- `mzdqkjbl`
-  - Replace with the real Formspree form ID after creating the Formspree form.
-  - Configure Formspree notifications to send inquiries to `yx0205yx@gmail.com`.
-- `G-XXXXXXXXXX`
-  - Replace with the real Google Analytics Measurement ID.
+- Production domain: `https://www.jinyiprecision.com`
+  - Canonical tags, schema markup, `sitemap.xml`, and `robots.txt` already use this domain.
+- Formspree form ID: `mzdqkjbl`
+  - Confirm that Formspree notifications are configured to send inquiries to `yx0205yx@gmail.com`.
+- Google Analytics
+  - Analytics is intentionally disabled until a verified GA4 Measurement ID is available. Add the real `G-XXXXXXXXXX` value to the page templates before enabling the tracking script.
 
 ## Local Preview
 

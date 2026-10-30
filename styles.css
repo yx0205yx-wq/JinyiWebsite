@@ -592,6 +592,7 @@ main figure img {
   transform: translateY(-3px);
 }
 
+.service-link-card h2,
 .service-link-card h3 {
   min-height: 52px;
   font-size: 17px;
@@ -1393,6 +1394,7 @@ main figure img {
     min-height: 0;
   }
 
+  .service-link-card h2,
   .service-link-card h3 {
     min-height: 0;
   }
@@ -1798,6 +1800,7 @@ main figure img {
     font-size: 22px;
   }
 
+  .service-link-card h2,
   .service-link-card h3 {
     min-height: 0;
     font-size: 18px;

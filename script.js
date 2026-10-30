@@ -109,7 +109,7 @@ const content = {
       ["20+ Years", "精密加工经验"],
       ["ISO9001", "质量体系认证"],
       ["24 Hours", "RFQ 快速响应"],
-      ["0.001mm", "油线切割精度"],
+      ["±0.001mm", "油线切割参考公差"],
     ],
     trust: [
       ["R0.03", "PG 成型研磨最小 R 角参考"],
@@ -156,7 +156,7 @@ const content = {
       {
         title: "研磨 / CNC / 板件",
         desc: "三井ハイテック、Okamoto 等研磨设备，配合机加工和协力资源对应板件与治具类零件。",
-        meta: ["精密研削", "CNC 成形研磨", "板件 500 x 350 x 70mm"],
+        meta: ["精密研削", "CNC 成形研磨"],
       },
     ],
     services: {
@@ -260,7 +260,7 @@ const content = {
       ["陶瓷精密零部件", "ZKA-901、NPZ 系列等陶瓷材料加工。", sharedImages.ceramic],
       ["精密板件", "小型精密 plate、孔位与型腔加工。", sharedImages.plates],
       ["细线切割微小件", "细线割、窄槽与微小轮廓加工。", sharedImages.smallWire],
-      ["钨钢成形零件", "钨钢成形研磨与高耐磨部件。", sharedImages.tungsten],
+      ["成形精密零件", "用于展示成形研磨零件；具体材质以项目图纸为准。", sharedImages.tungsten],
     ],
     blade: {
       eyebrow: "Micro Blade Capability",
@@ -295,19 +295,19 @@ const content = {
         tag: "Japan / Connector Punch",
         title: "连接器冲头",
         desc: "Material: Tungsten Carbide | Tolerance: ±0.002mm | Market: Japan",
-        points: ["Challenge: 超硬冲头刃口细小，尺寸与形状稳定性要求高。", "Solution: 采用 PG 成型研磨配合投影检测确认刃口轮廓。", "Result: 达成 ±0.002mm 关键尺寸要求，支持客户样件确认。"],
+        points: ["要求：钨钢冲头具有精细刃口，并按图纸控制 ±0.002mm 关键公差。", "工艺评估：关键轮廓考虑采用 PG 成型研磨并配合投影检测。", "检验重点：按确认图纸和约定测量方法核对轮廓、刃口状态与关键公差。"],
       },
       {
         tag: "Electronics / Ceramic Pin",
         title: "精密陶瓷定位针",
         desc: "Material: Precision Ceramic | Market: Electronics Industry",
-        points: ["Challenge: 客户需要绝缘、耐磨并保持稳定定位的细小陶瓷零件。", "Solution: 根据图纸确认接触面、边缘处理和检测基准，安排精密研磨加工。", "Result: 提供适合电子制造治具使用的稳定陶瓷定位部件。"],
+        points: ["要求：用于电子制造治具的精密陶瓷定位零件，材料与尺寸以客户图纸为准。", "工艺评估：加工前确认接触面、边缘状态、检测基准、材料牌号与装夹风险。", "检验重点：按确认图纸核对尺寸、边缘状态与定位特征。"],
       },
       {
         tag: "Precision Mold / Wire EDM Insert",
         title: "线切割精密模具镶件",
         desc: "Process: Wire EDM | Market: Precision Mold Industry",
-        points: ["Challenge: 模具镶件存在复杂轮廓、小 R 角和孔位要求。", "Solution: 评估线径、切割路径、基准和检测方式后进行线切割加工。", "Result: 帮助客户获得可装配、可复验的模具镶件。"],
+        points: ["要求：模具镶件具有复杂轮廓、小 R 角和受控孔位。", "工艺评估：加工前确认线径、切割路径、基准、避空区域与检测方法。", "检验重点：按确认图纸核对轮廓、最小圆角、孔位与装配关键尺寸。"],
       },
     ],
     faq: {
@@ -318,7 +318,7 @@ const content = {
     faqItems: [
       ["What file formats do you accept?", "We accept PDF, STEP, STP, DWG and DXF files for RFQ review. 2D drawings with tolerances are preferred for final quotation."],
       ["What is your minimum order quantity?", "Prototype, small-batch and custom orders can be reviewed. MOQ depends on material, process route and inspection requirements."],
-      ["What tolerance can you achieve?", "Typical tolerances depend on material and geometry. Our reference capabilities include oil wire EDM up to 0.001mm and PG grinding projects around ±0.002mm."],
+      ["What tolerance can you achieve?", "Typical tolerances depend on material and geometry. Our reference capabilities include oil wire EDM at ±0.001mm and PG grinding projects around ±0.002mm."],
       ["What is your lead time?", "Lead time depends on drawing complexity, material availability and quantity. RFQ responses are targeted within 24 hours after receiving complete drawings."],
       ["Can you sign NDA?", "Yes. We can sign NDA agreements for confidential drawings, tooling designs and customer projects."],
       ["Do you support overseas customers?", "Yes. Jinyi Precision has experience serving international customers across Japan, Southeast Asia, Europe, and North America."],
@@ -348,7 +348,6 @@ const content = {
       "榎本",
       "UGM",
       "中日 Craft",
-      "尼得科（东莞）",
       "京瓷（东莞）",
       "藤井精工",
       "富士冲压",
@@ -379,7 +378,7 @@ const content = {
       subject: "金一精密询价",
       bodyLabels: ["姓名 / 公司", "联系方式", "材料", "数量", "产品 / 工序", "关键公差 / 表面要求", "加工要求"],
       success: "已收到您的 RFQ 表单。请通过 Email 或 WhatsApp 继续发送图纸，我们会尽快回复。",
-      error: "提交未成功，请检查 Formspree 设置，或直接通过邮件 / WhatsApp 联系我们。",
+      error: "提交未成功，请重试，或直接通过邮件 / WhatsApp 联系我们。",
       configuring: "Formspree 表单 ID 尚未配置，请先替换表单 endpoint。",
     },
     footer: {
@@ -419,7 +418,7 @@ const content = {
       ["20+ Years", "精密加工経験"],
       ["ISO9001", "品質認証"],
       ["24 Hours", "RFQ 迅速対応"],
-      ["0.001mm", "油ワイヤー精度"],
+      ["±0.001mm", "油ワイヤー参考公差"],
     ],
     trust: [
       ["R0.03", "PG 加工の最小 R 参考値"],
@@ -466,7 +465,7 @@ const content = {
       {
         title: "研削 / CNC / プレート",
         desc: "三井ハイテック、Okamoto などの研削設備と機械加工・協力工場により、プレートや治具部品にも対応します。",
-        meta: ["精密研削", "CNC 成形研削", "プレート 500 x 350 x 70mm"],
+        meta: ["精密研削", "CNC 成形研削"],
       },
     ],
     services: {
@@ -570,7 +569,7 @@ const content = {
       ["セラミック精密部品", "ZKA-901、NPZ 系列などのセラミック材加工。", sharedImages.ceramic],
       ["精密プレート", "小型精密プレート、穴位置、キャビティ加工。", sharedImages.plates],
       ["細線ワイヤー微細部品", "細線加工、狭溝、微小輪郭加工。", sharedImages.smallWire],
-      ["超硬成形部品", "超硬成形研削、高耐摩耗部品。", sharedImages.tungsten],
+      ["成形精密部品", "成形研削部品の例。材質は案件図面に基づき確認します。", sharedImages.tungsten],
     ],
     blade: {
       eyebrow: "Micro Blade Capability",
@@ -605,19 +604,19 @@ const content = {
         tag: "Japan / Connector Punch",
         title: "コネクタ用パンチ",
         desc: "Material: Tungsten Carbide | Tolerance: ±0.002mm | Market: Japan",
-        points: ["Challenge: 超硬パンチの微細刃先に高い寸法安定性が要求されました。", "Solution: PG プロファイル研削と投影検査で刃先形状を確認しました。", "Result: ±0.002mm の重要寸法要求に対応し、お客様の試作確認を支援しました。"],
+        points: ["要求：超硬パンチの微細刃先と、図面で指定された ±0.002mm の重要公差。", "工程検討：重要輪郭に PG プロファイル研削と投影検査を適用する工程を検討します。", "検証項目：承認図面と合意した測定方法に基づき、輪郭、刃先状態、重要公差を確認します。"],
       },
       {
         tag: "Electronics / Ceramic Pin",
         title: "精密セラミック位置決めピン",
         desc: "Material: Precision Ceramic | Market: Electronics Industry",
-        points: ["Challenge: 絶縁性、耐摩耗性、安定した位置決めが必要でした。", "Solution: 接触面、エッジ処理、測定基準を確認して精密研削工程を設定しました。", "Result: 電子製造治具に適した安定したセラミック部品を提供しました。"],
+        points: ["要求：電子製造治具用の精密セラミック位置決め部品。材質と寸法は顧客図面に基づきます。", "工程検討：接触面、エッジ状態、測定基準、セラミック材質、取扱いリスクを加工前に確認します。", "検証項目：承認図面に基づき、寸法、エッジ状態、位置決め形状を確認します。"],
       },
       {
         tag: "Precision Mold / Wire EDM Insert",
         title: "ワイヤーカット金型インサート",
         desc: "Process: Wire EDM | Market: Precision Mold Industry",
-        points: ["Challenge: 複雑輪郭、小 R、穴位置が重要な金型インサートでした。", "Solution: 線径、切断経路、基準、検査方法を確認して加工しました。", "Result: 組付け可能で検証しやすい金型インサートを提供しました。"],
+        points: ["要求：複雑輪郭、小 R、管理された穴位置を持つ金型インサート。", "工程検討：加工前にワイヤ径、切断経路、基準、逃げ部、検査方法を確認します。", "検証項目：承認図面に基づき、輪郭、最小 R、穴位置、組付け重要寸法を確認します。"],
       },
     ],
     faq: {
@@ -628,7 +627,7 @@ const content = {
     faqItems: [
       ["What file formats do you accept?", "PDF、STEP、STP、DWG、DXF を受け付けています。正式見積には公差入り 2D 図面が最も有効です。"],
       ["What is your minimum order quantity?", "試作、小ロット、カスタム品を評価できます。MOQ は材料、工程、検査要求により異なります。"],
-      ["What tolerance can you achieve?", "公差は材料と形状により異なります。参考として油ワイヤー EDM は 0.001mm、PG 研削は ±0.002mm レベルの案件に対応します。"],
+      ["What tolerance can you achieve?", "公差は材料と形状により異なります。参考として油ワイヤー EDM は ±0.001mm、PG 研削は ±0.002mm レベルの案件に対応します。"],
       ["What is your lead time?", "納期は図面難易度、材料、数量により異なります。図面情報が揃っていれば 24 時間以内の RFQ 回答を目標にしています。"],
       ["Can you sign NDA?", "はい。機密図面、金型設計、顧客プロジェクトに関する NDA 締結に対応できます。"],
       ["Do you support overseas customers?", "はい。Jinyi Precision は日本、東南アジア、欧州、北米のお客様への対応経験があります。"],
@@ -658,7 +657,6 @@ const content = {
       "エノモト（株）",
       "UGM（株）",
       "中日クラフト（株）",
-      "ニデック（東莞）",
       "京セラ（東莞）",
       "藤井精工（株）",
       "富士プレス（株）",
@@ -689,7 +687,7 @@ const content = {
       subject: "金一精密 見積依頼",
       bodyLabels: ["お名前 / 会社名", "連絡先", "材料", "数量", "製品 / 工程", "重要公差 / 面要求", "加工要求"],
       success: "RFQ フォームを受け付けました。図面は Email または WhatsApp で続けてお送りください。確認後、早急に返信します。",
-      error: "送信できませんでした。Formspree 設定をご確認いただくか、メール / WhatsApp でご連絡ください。",
+      error: "送信できませんでした。再度お試しいただくか、メール / WhatsApp でご連絡ください。",
       configuring: "Formspree フォーム ID が未設定です。endpoint を置き換えてください。",
     },
     footer: {
@@ -700,7 +698,7 @@ const content = {
     },
   },
   en: {
-    metaTitle: "Precision Component Machining | Wire EDM & PG Grinding | Jinyi Precision",
+    metaTitle: "Precision Components Manufacturer | Jinyi Precision",
     company: {
       shortName: "Jinyi Precision Technology",
       fullName: "Dongguan Jinyi Precision Technology Co., Ltd.",
@@ -729,7 +727,7 @@ const content = {
       ["20+ Years", "Precision machining experience"],
       ["ISO9001", "Certified quality system"],
       ["24 Hours", "RFQ response"],
-      ["0.001mm", "Oil wire EDM precision"],
+      ["±0.001mm", "Oil wire EDM reference tolerance"],
     ],
     trust: [
       ["R0.03", "Reference minimum R for PG grinding"],
@@ -776,7 +774,7 @@ const content = {
       {
         title: "Grinding / CNC / Plates",
         desc: "Mitsui High-tec, Okamoto and other grinding equipment, combined with machining and partner resources, support plates and fixture parts.",
-        meta: ["Precision grinding", "CNC form grinding", "Plates 500 x 350 x 70mm"],
+        meta: ["Precision grinding", "CNC form grinding"],
       },
     ],
     services: {
@@ -880,7 +878,7 @@ const content = {
       ["Ceramic Precision Parts", "Ceramic processing including ZKA-901 and NPZ series materials.", sharedImages.ceramic],
       ["Precision Plates", "Small precision plates, hole positions and cavity processing.", sharedImages.plates],
       ["Fine Wire-Cut Micro Parts", "Fine wire EDM, narrow slots and micro contour processing.", sharedImages.smallWire],
-      ["Carbide Forming Parts", "Carbide form grinding and high-wear-resistance components.", sharedImages.tungsten],
+      ["Formed Precision Parts", "Representative formed grinding components; material is confirmed per project drawing.", sharedImages.tungsten],
     ],
     blade: {
       eyebrow: "Micro Blade Capability",
@@ -915,19 +913,19 @@ const content = {
         tag: "Japan / Connector Punch",
         title: "Connector Punch",
         desc: "Material: Tungsten Carbide | Tolerance: ±0.002mm | Market: Japan",
-        points: ["Challenge: The carbide punch required a fine cutting edge with stable dimensional control.", "Solution: PG profile grinding and optical projection inspection were used to control the critical profile.", "Result: The project achieved the ±0.002mm critical tolerance target for customer sample approval."],
+        points: ["Requirement: A tungsten carbide punch with a fine cutting edge and a specified critical tolerance of ±0.002mm.", "Process review: PG profile grinding and optical projection inspection are considered for the critical contour.", "Verification: Confirm the profile, edge condition and specified tolerance against the approved drawing and agreed measurement method."],
       },
       {
         tag: "Electronics / Ceramic Pin",
         title: "Precision Ceramic Pin",
         desc: "Material: Precision Ceramic | Market: Electronics Industry",
-        points: ["Challenge: The customer needed insulation, wear resistance and stable positioning in a small ceramic component.", "Solution: Contact surfaces, edge condition and inspection datums were confirmed before precision grinding.", "Result: Jinyi supplied a stable ceramic locating component suitable for electronic manufacturing fixtures."],
+        points: ["Requirement: A precision ceramic locating component for an electronics manufacturing fixture, with material and dimensions defined by the customer drawing.", "Process review: Contact surfaces, edge condition, inspection datums, ceramic grade and handling risk are confirmed before grinding.", "Verification: Confirm dimensions, edge condition and locating features against the approved drawing."],
       },
       {
         tag: "Precision Mold / Wire EDM Insert",
         title: "Wire EDM Mold Insert",
         desc: "Process: Wire EDM | Market: Precision Mold Industry",
-        points: ["Challenge: The mold insert had complex contours, small R corners and critical hole-position requirements.", "Solution: Wire diameter, cutting path, datum reference and inspection method were reviewed before machining.", "Result: The customer received a mold insert that was ready for assembly and dimensional verification."],
+        points: ["Requirement: A mold insert with complex contours, small radii and controlled hole positions.", "Process review: Wire diameter, cutting path, datum reference, relief areas and inspection method are confirmed before machining.", "Verification: Confirm the contour, minimum radius, hole position and assembly-critical dimensions against the approved drawing."],
       },
     ],
     faq: {
@@ -938,7 +936,7 @@ const content = {
     faqItems: [
       ["What file formats do you accept?", "Please send PDF, STEP, STP, DWG or DXF files. For final quotation, 2D drawings with tolerances and inspection datums are preferred."],
       ["What is your minimum order quantity?", "Prototype, small-batch and custom orders can be reviewed. MOQ depends on material, process route and inspection requirements."],
-      ["What tolerance can you achieve?", "Tolerance depends on part geometry and material. Reference capabilities include oil wire EDM up to 0.001mm and PG grinding around ±0.002mm."],
+      ["What tolerance can you achieve?", "Tolerance depends on part geometry and material. Reference capabilities include oil wire EDM at ±0.001mm and PG grinding around ±0.002mm."],
       ["What is your lead time?", "Lead time depends on complexity, material and quantity. We target a 24-hour RFQ response after receiving complete drawings."],
       ["Can you sign NDA?", "Yes. We can sign NDA agreements for confidential drawings, mold designs and customer projects."],
       ["Do you support overseas customers?", "Yes. Jinyi Precision has experience serving international customers across Japan, Southeast Asia, Europe, and North America."],
@@ -968,7 +966,6 @@ const content = {
       "Enomoto",
       "UGM",
       "Chunichi Craft",
-      "Nidec (Dongguan)",
       "Kyocera (Dongguan)",
       "Fujii Seiko",
       "Fuji Press",
@@ -999,7 +996,7 @@ const content = {
       subject: "Jinyi Precision RFQ",
       bodyLabels: ["Name / Company", "Contact", "Material", "Quantity", "Product / Process", "Key Tolerance / Surface Requirement", "Processing Requirements"],
       success: "Thank you. Your RFQ form has been submitted. Please send drawings by Email or WhatsApp, and we will reply as soon as possible.",
-      error: "Submission failed. Please check the Formspree setup or contact us by email / WhatsApp.",
+      error: "Submission failed. Please try again or contact us by email / WhatsApp.",
       configuring: "The Formspree form ID is not configured yet. Please replace the form endpoint first.",
     },
     footer: {
