@@ -3,6 +3,20 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/wire-edm-parts/index.html", "destination": "/wire-edm-parts/", "permanent": true },
+    { "source": "/pg-grinding/index.html", "destination": "/pg-grinding/", "permanent": true },
+    { "source": "/tungsten-carbide-parts/index.html", "destination": "/tungsten-carbide-parts/", "permanent": true },
+    { "source": "/ceramic-parts/index.html", "destination": "/ceramic-parts/", "permanent": true },
+    { "source": "/precision-mold-components/index.html", "destination": "/precision-mold-components/", "permanent": true },
+    { "source": "/blog/index.html", "destination": "/blog/", "permanent": true },
+    { "source": "/blog/what-is-wire-edm/index.html", "destination": "/blog/what-is-wire-edm/", "permanent": true },
+    { "source": "/blog/wire-edm-vs-cnc-machining/index.html", "destination": "/blog/wire-edm-vs-cnc-machining/", "permanent": true },
+    { "source": "/blog/what-is-pg-grinding/index.html", "destination": "/blog/what-is-pg-grinding/", "permanent": true },
+    { "source": "/blog/advantages-of-tungsten-carbide-parts/index.html", "destination": "/blog/advantages-of-tungsten-carbide-parts/", "permanent": true },
+    { "source": "/blog/ceramic-parts-for-precision-manufacturing/index.html", "destination": "/blog/ceramic-parts-for-precision-manufacturing/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

@@ -13,7 +13,8 @@
     <meta name="theme-color" content="#0f766e" />
     <link rel="canonical" href="https://www.jinyiprecision.com/" />
     <link rel="icon" href="assets/jinyi-logo.png" />
-    <link rel="preload" as="image" href="assets/real-photos/pg-profile-ground-components.png" fetchpriority="high" />
+    <!-- 【优化说明】首屏使用体积更小的 WebP，社交分享仍保留原始 PNG。 -->
+    <link rel="preload" as="image" href="assets/real-photos/pg-profile-ground-components.webp" fetchpriority="high" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Jinyi Precision Technology" />
     <meta property="og:locale" content="en_US" />
@@ -144,16 +145,22 @@
               <a class="button primary" href="#contact" data-i18n="hero.primaryCta">Send RFQ</a>
               <a class="button secondary" href="#capabilities" data-i18n="hero.secondaryCta">View Capabilities</a>
             </div>
-            <dl class="hero-metrics" id="hero-metrics"></dl>
+            <!-- 【优化说明】默认英文内容直接写入 HTML，减少首屏 JavaScript 渲染导致的布局偏移。 -->
+            <dl class="hero-metrics" id="hero-metrics">
+              <div class="metric"><dt>Precision machining experience</dt><dd>20+ Years</dd></div>
+              <div class="metric"><dt>Certified quality system</dt><dd>ISO9001</dd></div>
+              <div class="metric"><dt>RFQ response</dt><dd>24 Hours</dd></div>
+              <div class="metric"><dt>Oil wire EDM reference tolerance</dt><dd>±0.001mm</dd></div>
+            </dl>
           </div>
 
           <div class="hero-media" aria-label="Jinyi precision components and workshop">
             <figure class="hero-photo main-photo">
-              <img src="assets/real-photos/pg-profile-ground-components.png" alt="PG profile-ground precision components and custom formed inserts" width="631" height="425" fetchpriority="high" decoding="async" />
+              <img src="assets/real-photos/pg-profile-ground-components.webp" alt="PG profile-ground precision components and custom formed inserts" width="631" height="425" fetchpriority="high" decoding="async" />
               <figcaption data-i18n="hero.photoMain">PG profile-ground precision components</figcaption>
             </figure>
             <figure class="hero-photo side-photo">
-              <img src="assets/real-photos/edm-workshop-line.jpg" alt="Temperature-controlled EDM workshop" width="1440" height="810" loading="lazy" decoding="async" />
+              <img src="assets/real-photos/edm-workshop-line.webp" alt="Temperature-controlled EDM workshop" width="1440" height="810" loading="lazy" decoding="async" />
               <figcaption data-i18n="hero.photoSide">Temperature-controlled EDM workshop</figcaption>
             </figure>
           </div>
@@ -161,7 +168,12 @@
       </section>
 
       <section class="trust-bar" aria-label="Key process data">
-        <div class="section-inner trust-list" id="trust-list"></div>
+        <div class="section-inner trust-list" id="trust-list">
+          <div class="trust-item"><strong>R0.03</strong><span>Reference minimum R for PG grinding</span></div>
+          <div class="trust-item"><strong>φ0.05-φ0.20</strong><span>Oil / water wire EDM diameter</span></div>
+          <div class="trust-item"><strong>Ra0.05-Ra0.15</strong><span>PG grinding surface roughness</span></div>
+          <div class="trust-item"><strong>AD30LS x4</strong><span>Sodick mirror EDM equipment</span></div>
+        </div>
       </section>
 
       <section class="section about-section" id="about">
@@ -173,7 +185,14 @@
               Jinyi Precision focuses on custom precision component machining, including carbide parts, precision metal components, PG profile grinding and fine wire EDM.
             </p>
           </div>
-          <div class="strength-grid" id="strength-grid"></div>
+          <div class="strength-grid" id="strength-grid">
+            <article class="strength-card"><span class="card-index">01</span><h3>Carbide and electronics experience</h3><p>Strong in precision metal components for electronic parts, with carbide, steel and ceramic material support for connectors, precision stamping and automation parts.</p></article>
+            <article class="strength-card"><span class="card-index">02</span><h3>Accuracy and surface finish focus</h3><p>Processing environment, equipment selection and measurement methods are built around dimensional stability, surface roughness and verifiable data.</p></article>
+            <article class="strength-card"><span class="card-index">03</span><h3>Profile grinding process judgement</h3><p>Profile grinding experience supports more reliable process planning for complex forms, micro blade features and carbide components.</p></article>
+            <article class="strength-card"><span class="card-index">04</span><h3>Coating support</h3><p>PVD, TiAlN, DLC, HA and UPC coating options can be selected according to life, friction and film-thickness requirements.</p></article>
+            <article class="strength-card"><span class="card-index">05</span><h3>Japanese materials and alternatives</h3><p>Besides Japanese materials, Taiwan and China alternatives can be selected according to quality and cost targets, with Jinyi responsible for quality assurance.</p></article>
+            <article class="strength-card"><span class="card-index">06</span><h3>Internal and partner capacity</h3><p>Beyond carbide parts, resin-molding related components, die sets, plates and round parts can be supported through partner factories.</p></article>
+          </div>
         </div>
       </section>
 
@@ -186,7 +205,12 @@
               Clear machining capability information for purchasing, engineering and quality teams.
             </p>
           </div>
-          <div class="capability-grid" id="capability-grid"></div>
+          <div class="capability-grid" id="capability-grid">
+            <article class="capability-card"><div><span class="card-index">01</span><h3>PG Profile Grinding</h3><p>Japanese WAIDA CNC profile grinding for high-precision formed edges, punches, inserts and carbide precision components.</p></div><div class="capability-meta"><span>WAIDA PGX-2500SP x6</span><span>Tolerance ±0.002mm</span><span>Ra0.05-Ra0.15</span></div></article>
+            <article class="capability-card"><div><span class="card-index">02</span><h3>Oil / Water Wire EDM</h3><p>Seibu and AgieCharmilles wire EDM equipment supports fine wire, small R corners and high-precision contour processing.</p></div><div class="capability-meta"><span>Wire φ0.05-φ0.20</span><span>Water wire ±0.002mm</span><span>Oil wire ±0.001mm</span></div></article>
+            <article class="capability-card"><div><span class="card-index">03</span><h3>Sodick Mirror EDM</h3><p>Sodick AD30LS machines support fine EDM, mirror EDM and complex micro-feature processing.</p></div><div class="capability-meta"><span>AD30LS x4</span><span>Ra0.13-Ra0.4</span><span>Tolerance ±0.005</span></div></article>
+            <article class="capability-card"><div><span class="card-index">04</span><h3>Grinding / CNC / Plates</h3><p>Mitsui High-tec, Okamoto and other grinding equipment, combined with machining and partner resources, support plates and fixture parts.</p></div><div class="capability-meta"><span>Precision grinding</span><span>CNC form grinding</span></div></article>
+          </div>
         </div>
       </section>
 
@@ -199,7 +223,14 @@
               Dedicated service pages help buyers review materials, tolerances, equipment and RFQ requirements quickly.
             </p>
           </div>
-          <div class="service-link-grid" id="service-link-grid"></div>
+          <!-- 【优化说明】主要服务链接保留在原始 HTML 中，搜索引擎无需执行 JavaScript 即可发现。 -->
+          <div class="service-link-grid" id="service-link-grid">
+            <a class="service-link-card" href="/wire-edm-parts/"><span class="card-index">01</span><h3>Wire EDM Parts</h3><p>Fine wire, water wire and oil wire EDM for small R corners, complex contours and high-precision plates.</p><strong>View Service</strong></a>
+            <a class="service-link-card" href="/pg-grinding/"><span class="card-index">02</span><h3>PG Grinding</h3><p>WAIDA PG profile grinding for formed edges, punches, inserts and carbide precision components.</p><strong>View Service</strong></a>
+            <a class="service-link-card" href="/tungsten-carbide-parts/"><span class="card-index">03</span><h3>Tungsten Carbide Parts</h3><p>KD / EF / FD / RD carbide materials for wear-resistant punches, blades and precision inserts.</p><strong>View Service</strong></a>
+            <a class="service-link-card" href="/ceramic-parts/"><span class="card-index">04</span><h3>Ceramic Parts</h3><p>ZKA-901 and NPZ-series ceramic component machining for insulation, wear resistance and precise positioning.</p><strong>View Service</strong></a>
+            <a class="service-link-card" href="/precision-mold-components/"><span class="card-index">05</span><h3>Precision Mold Components</h3><p>Precision plates, cores, inserts and small mold component machining support.</p><strong>View Service</strong></a>
+          </div>
         </div>
       </section>
 
@@ -217,11 +248,11 @@
           </div>
           <div class="media-stack">
             <figure class="image-panel tall">
-              <img src="assets/real-photos/edm-workshop-overview.jpg" alt="EDM workshop overview" width="1706" height="1279" loading="lazy" decoding="async" />
+              <img src="assets/real-photos/edm-workshop-overview.webp" alt="EDM workshop overview" width="1706" height="1279" loading="lazy" decoding="async" />
               <figcaption data-i18n="equipment.imageOne">GF / AgieCharmilles wire EDM line</figcaption>
             </figure>
             <figure class="image-panel">
-              <img src="assets/real-photos/okamoto-grinding-machine.jpg" alt="Okamoto precision grinding machine" width="1260" height="2720" loading="lazy" decoding="async" />
+              <img src="assets/real-photos/okamoto-grinding-machine.webp" alt="Okamoto precision grinding machine" width="1260" height="2720" loading="lazy" decoding="async" />
               <figcaption data-i18n="equipment.imageTwo">Okamoto GRIND-X precision grinding</figcaption>
             </figure>
           </div>
@@ -229,9 +260,9 @@
         <div class="section-inner equipment-gallery-block">
           <div class="section-heading compact">
             <p class="eyebrow" data-i18n="equipment.galleryEyebrow">Equipment Gallery</p>
-            <h2 data-i18n="equipment.galleryTitle">设备图片展示</h2>
+            <h2 data-i18n="equipment.galleryTitle">Equipment Photo Gallery</h2>
             <p data-i18n="equipment.galleryBody">
-              按加工工艺与检测场景整理主要设备图片，便于快速了解现场配置。
+              Key equipment photos are organized by process, workshop environment and inspection scenario for quick review.
             </p>
           </div>
           <div class="equipment-gallery" id="equipment-gallery"></div>
@@ -242,9 +273,9 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="quality.eyebrow">Quality Assurance</p>
-            <h2 data-i18n="quality.title">恒温加工与检测，支撑可验证的尺寸稳定性</h2>
+            <h2 data-i18n="quality.title">Temperature-controlled processing and inspection for verifiable stability</h2>
             <p data-i18n="quality.body">
-              通过恒温加工环境、标准化检测方法与 ISO9001:2015 质量认证，提升精密零部件尺寸稳定性。
+              Temperature-controlled processing, standardized inspection methods and ISO9001:2015 certification support dimensional stability for precision components.
             </p>
           </div>
           <div class="quality-layout">
@@ -258,16 +289,16 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="products.eyebrow">Product Examples</p>
-            <h2 data-i18n="products.title">覆盖精密零部件、圆针、陶瓷与精密板件</h2>
+            <h2 data-i18n="products.title">Precision components, round pins, ceramics and precision plates</h2>
             <p data-i18n="products.body">
-              以代表性加工案例展示可对应的零件类型、材料范围与典型应用场景。
+              Representative machining examples show supported component types, material ranges and typical application scenarios.
             </p>
           </div>
           <div class="product-grid" id="product-grid"></div>
           <div class="blade-size-panel">
             <div>
               <p class="eyebrow" data-i18n="blade.eyebrow">Micro Blade Capability</p>
-              <h3 data-i18n="blade.title">可制作刃口最小尺寸与刃长范围</h3>
+              <h3 data-i18n="blade.title">Minimum blade size and blade length range</h3>
             </div>
             <div class="blade-table" id="blade-table"></div>
           </div>
@@ -278,9 +309,9 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="materials.eyebrow">Materials & Coatings</p>
-            <h2 data-i18n="materials.title">从日本材到台湾/中国替代材，兼顾品质与成本</h2>
+            <h2 data-i18n="materials.title">Japanese materials plus Taiwan and China alternatives for cost and quality balance</h2>
             <p data-i18n="materials.body">
-              可根据客户图纸、寿命要求和成本目标选择超硬、钢材、陶瓷与涂层方案。
+              Carbide, steel, ceramic and coating options can be selected according to drawings, service life requirements and cost targets.
             </p>
           </div>
           <div class="material-grid" id="material-grid"></div>
@@ -291,9 +322,9 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="caseStudies.eyebrow">Case Studies</p>
-            <h2 data-i18n="caseStudies.title">典型项目场景</h2>
+            <h2 data-i18n="caseStudies.title">Representative project scenarios</h2>
             <p data-i18n="caseStudies.body">
-              以常见询盘类型展示金一精密在图纸评估、加工路线、材料选择与检测确认中的配合方式。
+              Common RFQ scenarios show how Jinyi Precision supports drawing review, process planning, material selection and dimensional inspection.
             </p>
           </div>
           <div class="case-study-grid" id="case-study-grid"></div>
@@ -304,9 +335,9 @@
         <div class="section-inner two-column">
           <div class="section-copy">
             <p class="eyebrow" data-i18n="customers.eyebrow">Customer Experience</p>
-            <h2 data-i18n="customers.title">具备服务日系及国际制造客户的经验</h2>
+            <h2 data-i18n="customers.title">Experience supporting Japanese and international manufacturers</h2>
             <p data-i18n="customers.body">
-              我们服务于连接器、电子部件、精密冲压与精密制造相关领域客户，理解高精度零部件对品质、交期与工程沟通的要求。
+              We support customers in connector, electronic component, precision stamping and precision manufacturing-related fields, with attention to quality, delivery and clear engineering communication.
             </p>
           </div>
           <div class="customer-list" id="customer-list"></div>
@@ -317,9 +348,9 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
-            <h2 data-i18n="faq.title">采购与工程团队常见问题</h2>
+            <h2 data-i18n="faq.title">Questions from purchasing and engineering teams</h2>
             <p data-i18n="faq.body">
-              提前确认图纸、材料、数量、公差和交期信息，可以让我们更快完成加工评估和报价。
+              Sharing drawings, material, quantity, tolerance and delivery requirements helps us evaluate manufacturability and quotation faster.
             </p>
           </div>
           <div class="faq-list" id="faq-list"></div>
@@ -330,12 +361,18 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="blog.eyebrow">Technical Blog</p>
-            <h2 data-i18n="blog.title">面向采购与工程团队的精密加工知识</h2>
+            <h2 data-i18n="blog.title">Precision machining articles for industrial buyers</h2>
             <p data-i18n="blog.body">
-              通过工艺解释、材料选择和加工方式对比，帮助海外客户更快判断适合的加工方案。
+              Practical articles for purchasing managers, mechanical engineers and quality engineers evaluating wire EDM, PG grinding, carbide and ceramic components.
             </p>
           </div>
-          <div class="blog-grid" id="blog-grid"></div>
+          <div class="blog-grid" id="blog-grid">
+            <a class="blog-card" href="/blog/what-is-wire-edm/"><span>Article</span><h3>What is Wire EDM?</h3><p>Understand wire EDM principles, applications, tolerances and RFQ requirements.</p></a>
+            <a class="blog-card" href="/blog/wire-edm-vs-cnc-machining/"><span>Article</span><h3>Wire EDM vs CNC Machining</h3><p>Compare wire EDM and CNC machining for precision component sourcing.</p></a>
+            <a class="blog-card" href="/blog/what-is-pg-grinding/"><span>Article</span><h3>What is PG Grinding?</h3><p>Learn why PG profile grinding matters for formed edges and carbide components.</p></a>
+            <a class="blog-card" href="/blog/advantages-of-tungsten-carbide-parts/"><span>Article</span><h3>Advantages of Tungsten Carbide Parts</h3><p>Review wear resistance, service life and tooling benefits of carbide parts.</p></a>
+            <a class="blog-card" href="/blog/ceramic-parts-for-precision-manufacturing/"><span>Article</span><h3>Ceramic Parts for Precision Manufacturing</h3><p>Explore ceramic part applications in insulation, wear resistance and precision tooling.</p></a>
+          </div>
         </div>
       </section>
 
