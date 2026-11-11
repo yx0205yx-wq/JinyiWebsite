@@ -1,4 +1,6 @@
 /* Shared navigation and inquiry behavior. Formspree endpoint and field names stay in HTML. */
+import { inject } from '@vercel/analytics';
+
 (() => {
   const messages = {
     en: {
@@ -94,3 +96,6 @@
     });
   });
 })();
+
+// Initialize Vercel Analytics
+inject();

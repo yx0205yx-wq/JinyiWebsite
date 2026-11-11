@@ -5,10 +5,14 @@
   "description": "Production website for Dongguan Jinyi Precision Technology Co., Ltd.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "node tools/build-static.js",
+    "build": "vite build",
+    "build-legacy": "node tools/build-static.js",
     "preview": "vite preview --host 127.0.0.1"
   },
   "devDependencies": {
     "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
