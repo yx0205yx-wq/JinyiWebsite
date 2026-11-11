@@ -19,6 +19,7 @@ const sharedImages = {
   plates: "assets/company/precision-plate-components.webp",
   smallWire: "assets/real-photos/small-wire-cut-parts.webp",
   tungsten: "assets/real-photos/tungsten-forming-parts.webp",
+  pins: "assets/company/precision-pins-punches-core-pins.png",
 };
 
 const equipmentImages = {
@@ -46,6 +47,7 @@ const equipmentImages = {
 };
 
 const imageMeta = {
+  "assets/company/precision-pins-punches-core-pins.png": [336, 296],
   "assets/real-photos/pg-profile-ground-components.webp": [631, 425],
   "assets/real-photos/finished-mold-plates.webp": [1279, 1706],
   "assets/real-photos/edm-workshop-line.webp": [1440, 810],
@@ -237,18 +239,19 @@ const content = {
     ],
     products: {
       eyebrow: "Product Examples",
-      title: "覆盖精密零部件、圆针、陶瓷与精密板件",
-      body:
-        "以代表性加工案例展示可对应的零件类型、材料范围与典型应用场景。",
+      title: "精密模具与定制零部件",
+      body: "从冲头与镶件到针类、陶瓷件和板件，按客户图纸评估加工方案。",
+      note: "所有产品图片均为零件形状的代表性示例。实际材料、加工工艺、尺寸公差及可实现的技术要求，须经图纸评审与工程评估确认。",
     },
     productCards: [
-      ["精密零部件 / 镶件", "超硬、钢材、异形冲头与精密镶件。", sharedImages.moldSet],
-      ["PG 异形刃口", "细小轮廓、台阶、R 角与薄刃加工。", sharedImages.profileParts],
-      ["圆针与成形件", "超硬、钢材圆针及特殊形状零件。", sharedImages.roundPins],
-      ["陶瓷精密零部件", "ZKA-901、NPZ 系列等陶瓷材料加工。", sharedImages.ceramic],
-      ["精密板件", "小型精密 plate、孔位与型腔加工。", sharedImages.plates],
-      ["细线切割微小件", "细线割、窄槽与微小轮廓加工。", sharedImages.smallWire],
-      ["成形精密零件", "用于展示成形研磨零件；具体材质以项目图纸为准。", sharedImages.tungsten],
+      ["精密零部件与模具镶件", "按客户图纸加工钢材、硬质合金及异形零件，包括模具镶件、异形冲头和定制模具组件。", sharedImages.moldSet],
+      ["PG精密成形冲头与刀口", "采用PG成形研磨加工复杂轮廓、台阶、R角及精密刃口，满足定制冲头和模具零件的外形要求。", sharedImages.profileParts],
+      ["精密成形研磨零件", "加工复杂外形、特殊轮廓及功能性结构；材料、尺寸及公差根据客户图纸评估。", sharedImages.tungsten],
+      ["精密针类、冲针与型芯针", "按图定制细长针、阶梯针、锥形冲针及型芯针，满足指定外形、尺寸和配合要求。", sharedImages.pins],
+      ["精密圆柱件与套类零件", "按图加工圆柱件、套筒及环形零件，满足台阶结构及内外形尺寸要求。", sharedImages.roundPins],
+      ["陶瓷精密零部件", "提供ZKA-901、NPZ-28及NPZ-1等陶瓷材料加工，结合材料特性和客户图纸评估工艺要求。", sharedImages.ceramic],
+      ["精密模具板件", "加工小型精密模具板件，包括孔位、型腔、槽位及复杂轮廓，满足图纸规定的尺寸和配合要求。", sharedImages.plates],
+      ["慢走丝精密微小零件", "采用慢走丝加工窄槽、微小开口及复杂贯穿轮廓；加工可行性根据材料、几何形状及图纸评估。", sharedImages.smallWire],
     ],
     materials: {
       eyebrow: "Materials & Coatings",
@@ -524,18 +527,19 @@ const content = {
     ],
     products: {
       eyebrow: "Product Examples",
-      title: "精密部品、丸ピン、セラミック、精密プレートまで対応",
-      body:
-        "代表的な加工事例を通じて、対応可能な部品種類、材料範囲、主な用途を分かりやすく示しています。",
+      title: "精密金型部品・特注部品",
+      body: "パンチやインサートからピン、セラミック部品、金型プレートまで、図面に基づき加工方法を検討します。",
+      note: "製品画像は部品形状の代表例です。実際の材質、加工方法、寸法公差、対応可能な仕様は、図面確認と技術検討に基づき決定します。",
     },
     productCards: [
-      ["精密部品 / インサート", "超硬、鋼材、異形パンチ、精密インサート。", sharedImages.moldSet],
-      ["PG 異形刃先", "微細輪郭、段差、R 形状、薄刃加工。", sharedImages.profileParts],
-      ["丸ピン・成形部品", "超硬、鋼材丸ピン、特殊形状部品。", sharedImages.roundPins],
-      ["セラミック精密部品", "ZKA-901、NPZ 系列などのセラミック材加工。", sharedImages.ceramic],
-      ["精密プレート", "小型精密プレート、穴位置、キャビティ加工。", sharedImages.plates],
-      ["細線ワイヤー微細部品", "細線加工、狭溝、微小輪郭加工。", sharedImages.smallWire],
-      ["成形精密部品", "成形研削部品の例。材質は案件図面に基づき確認します。", sharedImages.tungsten],
+      ["精密部品・金型インサート", "お客様の図面に基づき、鋼材・超硬合金の部品を加工。金型インサート、異形パンチ、特注金型部品に対応します。", sharedImages.moldSet],
+      ["PG成形研削パンチ・刃先", "PG成形研削により、特注パンチや金型部品の複雑な輪郭、段差、R形状、精密刃先を加工します。", sharedImages.profileParts],
+      ["精密成形研削部品", "複雑な外形や機能輪郭の成形研削。材質、寸法、公差はお客様の図面に基づき検討します。", sharedImages.tungsten],
+      ["精密ピン・パンチ・コアピン", "細長ピン、段付きピン、テーパーパンチ、コアピンを、指定の形状・寸法・はめあい要件に基づき製作します。", sharedImages.pins],
+      ["精密円筒部品・スリーブ", "円筒部品、スリーブ、リングを図面に基づき加工し、段付き形状や内外径などの寸法要件に対応します。", sharedImages.roundPins],
+      ["セラミック精密部品", "ZKA-901、NPZ-28、NPZ-1などのセラミックを加工。材料特性と図面に基づき加工条件を検討します。", sharedImages.ceramic],
+      ["精密金型プレート", "小型精密金型プレートの穴、キャビティ、溝、複雑な輪郭を、指定の寸法・はめあい要件に基づき加工します。", sharedImages.plates],
+      ["ワイヤ放電加工による精密微小部品", "狭い溝、小さな開口、複雑な貫通輪郭のワイヤ放電加工。材質、形状、図面に基づき加工可否を検討します。", sharedImages.smallWire],
     ],
     materials: {
       eyebrow: "Materials & Coatings",
@@ -811,18 +815,19 @@ const content = {
     ],
     products: {
       eyebrow: "Product Examples",
-      title: "Precision components, round pins, ceramics and precision plates",
-      body:
-        "Representative machining examples show supported component types, material ranges and typical application scenarios.",
+      title: "Precision Mold Parts & Custom Components",
+      body: "From punches and inserts to pins, ceramic components, and mold plates, each project is reviewed against customer drawings.",
+      note: "All product images are representative examples of component geometries. Actual materials, manufacturing processes, dimensional tolerances, and achievable specifications are subject to drawing review and engineering evaluation.",
     },
     productCards: [
-      ["Precision Components / Inserts", "Carbide, steel, formed punches and precision inserts.", sharedImages.moldSet],
-      ["PG Formed Edges", "Fine contours, steps, R corners and thin blade features.", sharedImages.profileParts],
-      ["Round Pins and Formed Parts", "Carbide and steel round pins plus special formed components.", sharedImages.roundPins],
-      ["Ceramic Precision Parts", "Ceramic processing including ZKA-901 and NPZ series materials.", sharedImages.ceramic],
-      ["Precision Plates", "Small precision plates, hole positions and cavity processing.", sharedImages.plates],
-      ["Fine Wire-Cut Micro Parts", "Fine wire EDM, narrow slots and micro contour processing.", sharedImages.smallWire],
-      ["Formed Precision Parts", "Representative formed grinding components; material is confirmed per project drawing.", sharedImages.tungsten],
+      ["Precision Components & Mold Inserts", "Custom machining of steel and cemented carbide components, including mold inserts, formed punches, and tooling parts, to customer drawings.", sharedImages.moldSet],
+      ["PG Profile-Ground Punches & Cutting Edges", "PG profile grinding for complex contours, steps, radii, and cutting edges on custom punches and mold components.", sharedImages.profileParts],
+      ["Precision Profile-Ground Components", "Profile grinding for complex external shapes and functional contours. Materials, dimensions, and tolerances are reviewed against customer drawings.", sharedImages.tungsten],
+      ["Precision Pins, Punches & Core Pins", "Custom slender pins, stepped pins, tapered punches, and core pins manufactured to specified geometries, dimensions, and fit requirements.", sharedImages.pins],
+      ["Precision Cylindrical Components & Sleeves", "Custom cylindrical components, sleeves, and rings machined to drawing requirements for stepped profiles and internal and external dimensions.", sharedImages.roundPins],
+      ["Precision Ceramic Components", "Machining of selected technical ceramics, including ZKA-901, NPZ-28, and NPZ-1. Process requirements are reviewed against material characteristics and drawings.", sharedImages.ceramic],
+      ["Precision Mold Plates", "Custom machining of small precision mold plates with holes, cavities, slots, and complex profiles to specified dimensions and fit requirements.", sharedImages.plates],
+      ["Precision Wire EDM Micro Components", "Wire EDM for narrow slots, small openings, and intricate through-profiles. Feasibility is reviewed against material, geometry, and drawings.", sharedImages.smallWire],
     ],
     materials: {
       eyebrow: "Materials & Coatings",
@@ -1186,7 +1191,7 @@ function renderDynamicContent(lang) {
     dict.productCards,
     ([title, desc, image]) => `
       <article class="product-card">
-        <figure><img ${imageAttrs(image, title)} /></figure>
+        <figure><img ${image === sharedImages.pins ? 'class="product-image-contain" ' : ""}${imageAttrs(image, title)} /></figure>
         <div>
           <h3>${escapeHtml(title)}</h3>
           <p>${escapeHtml(desc)}</p>

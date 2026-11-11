@@ -776,6 +776,17 @@ main figure img {
   object-fit: cover;
 }
 
+.product-card img.product-image-contain {
+  object-fit: contain;
+}
+
+.product-note {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .product-card div {
   padding: 18px;
 }
