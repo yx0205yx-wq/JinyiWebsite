@@ -114,10 +114,10 @@ const content = {
       ["±0.001 mm", "油线切割参考公差"],
     ],
     trust: [
-      ["按图评审", "PG最小圆角"],
-      ["φ0.05-φ0.20 mm", "油/水线切割线径范围"],
-      ["按图评审", "PG研磨表面粗糙度"],
-      ["AD30LS", "Sodick 镜面放电加工设备"],
+      ["R0.02mm", "PG最小圆角"],
+      ["φ0.05–φ0.20 mm", "油/水线切割线径范围"],
+      ["Ra0.05–Ra0.15", "PG研磨表面粗糙度"],
+      ["AD30LS ×4", "Sodick 镜面放电加工设备"],
     ],
     about: {
       eyebrow: "Company Profile",
@@ -401,10 +401,10 @@ const content = {
       ["±0.001 mm", "油ワイヤー参考公差"],
     ],
     trust: [
-      ["図面で検討", "PG最小コーナーR"],
-      ["φ0.05-φ0.20 mm", "油 / 水ワイヤー線径範囲"],
-      ["図面で検討", "PG研削面粗さ"],
-      ["AD30LS", "Sodick 鏡面放電加工設備"],
+      ["R0.02mm", "PG最小コーナーR"],
+      ["φ0.05–φ0.20 mm", "油 / 水ワイヤー線径範囲"],
+      ["Ra0.05–Ra0.15", "PG研削面粗さ"],
+      ["AD30LS ×4", "Sodick 鏡面放電加工設備"],
     ],
     about: {
       eyebrow: "Company Profile",
@@ -688,10 +688,10 @@ const content = {
       ["±0.001 mm", "Oil wire EDM reference tolerance"],
     ],
     trust: [
-      ["Drawing review", "Minimum corner radius for PG grinding"],
-      ["φ0.05-φ0.20 mm", "Oil / water wire EDM diameter"],
-      ["By drawing", "PG grinding surface finish"],
-      ["AD30LS", "Sodick mirror EDM equipment"],
+      ["R0.02mm", "Minimum corner radius for PG grinding"],
+      ["φ0.05–φ0.20 mm", "Oil / water wire EDM diameter"],
+      ["Ra0.05–Ra0.15", "PG grinding surface finish"],
+      ["AD30LS ×4", "Sodick mirror EDM equipment"],
     ],
     about: {
       eyebrow: "Company Profile",
