@@ -1930,3 +1930,114 @@ main figure img {
     padding: 18px;
   }
 }
+
+/* Phase 1: shared navigation, footer contacts and inquiry accessibility. */
+.brand {
+  min-width: 0;
+}
+
+.site-nav {
+  gap: clamp(12px, 1.2vw, 22px);
+}
+
+.site-nav a,
+.header-cta {
+  white-space: nowrap;
+}
+
+.footer-contact {
+  display: grid;
+  gap: 8px;
+  max-width: 52ch;
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.footer-contact span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-contact a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.menu-button:focus-visible,
+.site-nav a:focus-visible,
+.button:focus-visible,
+.header-cta:focus-visible,
+.footer-contact a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1120px) {
+  .site-header.is-open {
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header.is-open .header-actions:not(:has(.language-switch)) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Article navigation clears the shared header at every viewport width. */
+.long-content h2[id],
+.long-content h3[id],
+.long-content .article-anchor {
+  scroll-margin-top: max(80px, calc(var(--site-header-height, 75px) + 12px));
+}
+.article-anchor { display: block; }
+.long-content a:not(.button),
+.service-page .contact-list a,
+.breadcrumb a {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 150ms ease;
+}
+.long-content a:not(.button):hover,
+.service-page .contact-list a:hover,
+.breadcrumb a:hover { color: var(--brand); }
+.long-content a:focus-visible,
+.service-page .contact-list a:focus-visible,
+.breadcrumb a:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+.article-toc ul { display: grid; gap: 8px; }
+.long-content li { line-height: 1.7; }
+.drawing-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 10px 0 18px;
+}
+.channel-whatsapp { gap: 6px; }
+.whatsapp-icon { display: inline-block; flex: 0 0 18px; width: 18px; height: 18px; }
+.channel-whatsapp span { min-width: 0; }
+@media (max-width: 600px) {
+  .floating-contact a {
+    flex-direction: column;
+    gap: 2px;
+    padding: 6px 4px;
+    min-height: 62px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .site-footer { padding-bottom: 84px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .long-content a:not(.button), .breadcrumb a { transition: none; }
+}

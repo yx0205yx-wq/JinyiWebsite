@@ -6,8 +6,8 @@ const contact = {
   whatsapp: "+86 13515525036",
   whatsappUrl: "https://wa.me/8613515525036",
   address:
-    "Room 101, No.11, Xinwei East Seventh Lane, Shixia Village, Dalang Town, Dongguan City, China",
-  addressZh: "广东省东莞市大朗镇石厦新围东七巷11号",
+    "Room 101, No. 11, Xinwei East Seventh Lane, Shixia Village, Dalang Town, Dongguan City, Guangdong Province, China",
+  addressZh: "广东省东莞市大朗镇石厦新围东七巷11号101室",
 };
 
 // 【优化说明】页面展示优先使用 WebP，降低图片传输体积；原始 JPG/PNG 保留给社交分享和归档。
@@ -81,9 +81,10 @@ const imageMeta = {
 
 const content = {
   zh: {
-    metaTitle: "精密零部件定制加工 | 线切割与 PG 研磨 | 金一精密",
+    metaTitle: "精密零部件定制加工 | 线切割与 PG 研磨 | Jinyi Precision",
+    metaDescription: "为模具、连接器和自动化制造商提供定制精密零部件、线切割、PG研磨、硬质合金和陶瓷零件。24小时询价响应。",
     company: {
-      shortName: "金一精密科技",
+      shortName: "Jinyi Precision",
       fullName: "东莞市金一精密科技有限公司",
     },
     nav: {
@@ -94,14 +95,14 @@ const content = {
       products: "产品案例",
       blog: "技术文章",
       contact: "联系我们",
-      quote: "询价",
+      quote: "发送询价",
     },
     hero: {
       eyebrow: "精密零部件加工制造商",
       title: "精密零部件定制加工",
       lead:
         "聚焦高精度研磨、细线切割与镜面放电加工，服务电子连接器、精密组件及自动化零件客户。",
-      primaryCta: "发送图纸询价",
+      primaryCta: "邮件发送图纸",
       secondaryCta: "查看加工能力",
       photoMain: "PG 成型研磨异形精密零部件",
       photoSide: "恒温 EDM 加工现场",
@@ -110,13 +111,13 @@ const content = {
       ["20+ Years", "精密加工经验"],
       ["ISO9001", "质量体系认证"],
       ["24 Hours", "RFQ 快速响应"],
-      ["±0.001mm", "油线切割参考公差"],
+      ["±0.001 mm", "油线切割参考公差"],
     ],
     trust: [
-      ["R0.03", "PG 成型研磨最小 R 角参考"],
-      ["φ0.05-φ0.20", "油/水线切割线径范围"],
-      ["Ra0.05-Ra0.15", "PG 研磨表面粗糙度"],
-      ["AD30LS x4", "Sodick 镜面放电加工设备"],
+      ["按图评审", "PG最小圆角"],
+      ["φ0.05-φ0.20 mm", "油/水线切割线径范围"],
+      ["按图评审", "PG研磨表面粗糙度"],
+      ["AD30LS", "Sodick 镜面放电加工设备"],
     ],
     about: {
       eyebrow: "Company Profile",
@@ -141,22 +142,22 @@ const content = {
     capabilityCards: [
       {
         title: "PG 成型研磨",
-        desc: "日本 WAIDA CNC 轮廓研磨设备，用于高精度异形刃口、冲头、镶件和超硬精密零部件。",
-        meta: ["WAIDA PGX-2500SP x6", "公差 ±0.002mm", "Ra0.05-Ra0.15"],
+        desc: "日本 WAIDA CNC 轮廓研磨设备，用于高精度异形刃口、冲头、镶件和超硬精密零部件。 实际可达到的结果取决于零件形状、材料和加工条件。",
+        meta: ["WAIDA PGX-2500SP x6", "参考公差 ±0.002 mm", "PG表面粗糙度按图评审"],
       },
       {
         title: "油/水线切割",
-        desc: "西部电机与 AgieCharmilles 线切割设备，支持细线、微小 R 角和高精度轮廓加工。",
-        meta: ["线径 φ0.05-φ0.20", "水切 ±0.002mm", "油切 ±0.001mm"],
+        desc: "西部电机水介质和油介质线切割设备，支持细线、微小 R 角和高精度轮廓加工。",
+        meta: ["线径 φ0.05-φ0.20 mm", "水切 ±0.002 mm", "油切 ±0.001 mm"],
       },
       {
         title: "Sodick 镜面 EDM",
         desc: "Sodick AD30LS 用于微细放电、镜面放电及复杂微细部位加工。",
-        meta: ["AD30LS x4", "Ra0.13-Ra0.4", "公差 ±0.005"],
+        meta: ["AD30LS", "钢材 Ra0.4 µm / 超硬 Ra0.13 µm", "公差 ±0.005 mm"],
       },
       {
         title: "研磨 / CNC / 板件",
-        desc: "三井ハイテック、Okamoto 等研磨设备，配合机加工和协力资源对应板件与治具类零件。",
+        desc: "精密研磨工艺，配合机加工和协力资源对应板件与治具类零件。",
         meta: ["精密研削", "CNC 成形研磨"],
       },
     ],
@@ -174,39 +175,25 @@ const content = {
     ],
     equipment: {
       eyebrow: "Equipment",
-      title: "完整设备明细与加工参数",
+      title: "已确认设备与资料所列规格",
       body:
-        "按公司设备介绍完整整理设备型号、数量、加工尺寸与备注，便于采购和工程人员逐项核对。",
-      imageOne: "GF / AgieCharmilles wire EDM line",
-      imageTwo: "Okamoto GRIND-X precision grinding",
+        "仅列示现行已确认的设备资料。尺寸采用公司介绍第9页原文，不代表保证的最大成品尺寸或有效加工行程。西部电机水介质线切割设备合计8台，油介质线切割另列。",
+      imageOne: "Company presentation: EDM workshop photograph",
+      imageTwo: "Company presentation: precision grinding photograph",
       galleryEyebrow: "Equipment Gallery",
       galleryTitle: "设备图片展示",
-      galleryBody: "按加工工艺、现场环境与检测场景整理主要设备图片，便于快速了解实际配置。",
+      galleryBody: "公司介绍资料照片按工艺、现场与检测场景整理，不作为现行设备清单；已确认设备见上表。",
     },
-    equipmentColumns: ["NO", "机械设备", "数量", "尺寸", "备注"],
+    equipmentColumns: ["NO", "机械设备", "数量", "资料所列设备规格", "备注"],
     equipmentRows: [
-      ["1", "WAIDA 轮廓研磨机 PGX-2500SP", "6 台", "100mm x 100mm x 150mm", "最小 R0.03，公差 ±0.002mm"],
-      ["2", "西部电机线切割加工机 MP250S", "1 台", "250mm x 180mm x 80mm", "线径 φ0.2，最小 R0.12，公差 ±0.002mm"],
-      ["3", "西部电机线切割加工机 M50A", "5 台", "500mm x 300mm x 80mm", "线径 φ0.1-φ0.2，最小 R0.065，公差 ±0.002mm"],
-      ["4", "西部电机线切割加工机 MM50A", "1 台", "500mm x 300mm x 80mm", "线径 φ0.07-φ0.2，最小 R0.05，公差 ±0.002mm"],
-      ["5", "西部线切割机 M50B", "1 台", "500mm x 350mm x 80mm", "线径 φ0.1-φ0.2，最小 R0.065，公差 ±0.002mm"],
-      ["6", "西部电机油线切割加工机 M25LP", "1 台", "250mm x 250mm x 80mm", "线径 φ0.05-φ0.2，最小 R0.035，公差 ±0.002mm"],
-      ["7", "Agie 油线切割 CUT 2000 OilTech", "2 台", "350mm x 250mm x 80mm", "线径 φ0.2，最小 R0.12，公差 ±0.001mm"],
-      ["8", "CASTEK 细孔打孔机", "2 台", "300mm x 200mm x 230mm", "细穴 φ0.3-φ3.0"],
-      ["9", "Sodick 镜面放电加工机 AD30LS", "4 台", "320mm x 200mm x 230mm", "钢材 Ra0.13，超硬 Ra0.4，公差 ±0.005"],
-      ["10", "大友 5S/3S 铣床", "2 台", "900mm x 300mm x 400mm", ""],
-      ["11", "CTEK 成型放电加工机 320", "1 台", "300mm x 200mm x 230mm", "粗放电，公差 ±0.01"],
-      ["12", "CREATOR 成型放电加工机 -2", "3 台", "350mm x 300mm x 260mm", "粗放电，公差 ±0.01"],
-      ["13", "CREATOR 成型放电加工机 CR-5C", "1 台", "300mm x 300mm x 260mm", "粗放电，公差 ±0.01"],
-      ["14", "FANUC 加工中心 α-D21MiA", "1 台", "500mm x 400mm x 330mm", "公差 ±0.01"],
-      ["15", "三井高科技研磨机 MSG-200MH", "6 台", "350mm x 150mm x 180mm", "公差 ±0.002"],
-      ["16", "三井高科技 CNC 研磨机 MSG-460NC", "1 台", "75mm x 150mm x 50mm", "可镜面加工，公差 ±0.002"],
-      ["17", "大同研磨盘 TSG-350", "6 台", "300mm x 150mm x 170mm", "公差 ±0.002"],
-      ["18", "JOENLIH 研磨盘", "4 台", "300mm x 150mm x 170mm", "公差 ±0.002"],
-      ["19", "TALIANG CNC 绘图机", "1 台", "200mm x 160mm", "制作轮廓研磨用胶片"],
-      ["20", "激光刻印机", "1 台", "", ""],
-      ["21", "三井治具研磨盘 4GDN", "1 台", "610mm x 410mm x 135mm", "公差 ±0.001"],
-      ["22", "三井治具研磨盘 300G", "1 台", "500mm x 300mm x 95mm", "公差 ±0.001"],
+      ["1", "WAIDA 轮廓研磨机 PGX-2500SP", "6 台", "100 mm × 100 mm × 150 mm", "参考公差 ±0.002 mm"],
+      ["2", "西部电机水介质线切割加工机 MP250S", "1 台", "250 mm x 180 mm x 80 mm", "线径 φ0.2 mm，最小 R0.12 mm，公差 ±0.002 mm"],
+      ["3", "西部电机水介质线切割加工机 M50A", "5 台", "500 mm x 300 mm x 80 mm", "线径 φ0.1-φ0.2 mm，最小 R0.065 mm，公差 ±0.002 mm"],
+      ["4", "西部电机水介质线切割加工机 MM50A", "1 台", "500 mm x 300 mm x 80 mm", "线径 φ0.07-φ0.2 mm，最小 R0.05 mm，公差 ±0.002 mm"],
+      ["5", "西部电机水介质线切割机 M50B", "1 台", "500 mm x 350 mm x 80 mm", "线径 φ0.1-φ0.2 mm，最小 R0.065 mm，公差 ±0.002 mm"],
+      ["6", "西部电机油线切割加工机 M25LP", "—", "250 mm x 250 mm x 80 mm", "线径 φ0.05-φ0.2 mm，最小 R0.035 mm，公差 ±0.001 mm"],
+      ["9", "Sodick 镜面放电加工机 AD30LS", "—", "320 mm x 200 mm x 230 mm", "钢材 Ra0.4 µm，超硬 Ra0.13 µm，公差 ±0.005 mm"],
+      ["CMM", "Hexagon 686 三坐标测量机", "—", "—", "公司自有，厂内使用"],
     ],
     equipmentGallery: [
       ["PG 成型研磨", "WAIDA PG 加工现场", "CNC profile grinding 设备用于高精度异形刃口、冲头与超硬零件。", equipmentImages.pgWorkshop],
@@ -214,7 +201,7 @@ const content = {
       ["线切割 EDM", "西部电机线切割设备组", "支持细线、微小 R 角和高精度轮廓切割。", equipmentImages.wireLine],
       ["线切割 EDM", "油/水线切割单机", "用于精密轮廓、窄槽与微细孔位相关加工。", equipmentImages.wireMachine],
       ["镜面 EDM", "Sodick 镜面放电加工机", "对应微细放电、镜面放电与复杂型腔加工。", equipmentImages.sodickEdm],
-      ["精密研削", "三井ハイテック研削设备", "用于平面、成形与高稳定性精密研削。", equipmentImages.mitsuiGrinding],
+      ["精密研削", "资料照片：精密研磨设备", "用于平面、成形与高稳定性精密研削。", equipmentImages.mitsuiGrinding],
       ["CNC 成形研削", "CNC 成形研削加工区", "用于复杂形状、台阶与轮廓面的稳定加工。", equipmentImages.cncGrinding],
       ["投影研磨", "光学投影研磨设备", "用于小型精密零件的轮廓确认与精密成形加工。", equipmentImages.opticalGrinding],
       ["协力设备", "协力会社设备概览", "补充板件、治具和部分机加工需求的协作产能。", equipmentImages.partnerEquipment],
@@ -229,17 +216,18 @@ const content = {
       ["检测设备", "投影测量设备", "用于刃部形状、轮廓与微细特征确认。", equipmentImages.projector],
       ["检测设备", "工具显微镜", "用于孔形、细小轮廓和局部形状检查。", equipmentImages.microscope],
       ["检测设备", "表面粗糙度测定机", "用于面粗度确认与表面状态评价。", equipmentImages.roughnessTester],
-      ["检测设备", "三次元测量设备", "用于板件孔位、孔距和空间尺寸检测。", equipmentImages.cmm],
+      ["检测设备", "高度测量设备", "检验区的高度测量设备。", equipmentImages.cmm],
     ],
     quality: {
+      route: "多数制造设备和工序在厂内完成，部分工序采用外协。每个项目的加工路线、合作方工序和检验要求均在评审时确认。",
       eyebrow: "Quality Assurance",
       title: "恒温加工与检测，支撑可验证的尺寸稳定性",
       body:
-        "通过恒温加工环境、标准化检测方法与 ISO9001:2015 质量认证，提升精密零部件尺寸稳定性。",
+        "通过恒温加工环境与标准化检测方法，提升精密零部件尺寸稳定性。ISO 9001:2015 认证范围为精密模具配件的生产。金一精密拥有并在厂内使用 Hexagon 686 三坐标测量机（CMM），按项目要求和约定的检验计划进行尺寸检验。",
     },
     qualityCards: [
-      ["22°C ±0.5°C 恒温管理", "加工设备设置于恒温室，尽量降低室温变化导致的机械变动，支撑绝对位置精度。"],
-      ["ISO9001:2015", "在尺寸测量、精密零部件制造、塑胶成形相关领域建立质量管理体系。"],
+      ["22°C ±0.5°C 恒温管理", "指定温控加工区域保持 22°C ±0.5°C，检测室维持相同环境条件。该说明不适用于整个工厂或全部外协区域。"],
+      ["ISO9001:2015", "认证范围：精密模具配件的生产。"],
       ["按部位建立检测方法", "外径、孔形、孔距、直角度、刃部形状、面粗度均有对应测量方法。"],
     ],
     inspections: [
@@ -263,17 +251,6 @@ const content = {
       ["细线切割微小件", "细线割、窄槽与微小轮廓加工。", sharedImages.smallWire],
       ["成形精密零件", "用于展示成形研磨零件；具体材质以项目图纸为准。", sharedImages.tungsten],
     ],
-    blade: {
-      eyebrow: "Micro Blade Capability",
-      title: "可制作刃口最小尺寸与刃长范围",
-    },
-    bladeRows: [
-      ["0.14-0.20mm", "10mm 以内"],
-      ["0.20-0.30mm", "15mm 以内"],
-      ["0.30-0.50mm", "18mm 以内"],
-      ["0.50-1.00mm", "20mm 以内"],
-      ["1.00mm 以上", "30mm 以内"],
-    ],
     materials: {
       eyebrow: "Materials & Coatings",
       title: "从日本材到台湾/中国替代材，兼顾品质与成本",
@@ -283,8 +260,8 @@ const content = {
     materialCards: [
       ["日本超硬材料", ["KD10 / KD20 / ME40", "EF05 / EF10 / EF20", "FD15 / FD25 / RD30 / RD50"]],
       ["钢材", ["SK3 / SKH3 / SKH51", "SKD11 / SKD61", "SUS304 / ASP23 / ASP60"]],
-      ["陶瓷材料", ["ZKA-901", "NPZ-28", "NPZ-1"]],
-      ["涂层与替代材", ["PVD / TiAlN", "DLC 0.5μ 以下", "台湾材、中国材可选"]],
+      ["陶瓷材料", ["ZKA-901", "NPZ-28", "NPZ-1", "Z-KAC901：美国制造陶瓷加工案例；与ZKA-901分别记录"]],
+      ["涂层与替代材", ["PVD / TiAlN", "DLC 0.5μm 以下", "台湾材、中国材可选"]],
     ],
     caseStudies: {
       eyebrow: "Case Studies",
@@ -295,8 +272,8 @@ const content = {
       {
         tag: "Japan / Connector Punch",
         title: "连接器冲头",
-        desc: "Material: Tungsten Carbide | Tolerance: ±0.002mm | Market: Japan",
-        points: ["要求：钨钢冲头具有精细刃口，并按图纸控制 ±0.002mm 关键公差。", "工艺评估：关键轮廓考虑采用 PG 成型研磨并配合投影检测。", "检验重点：按确认图纸和约定测量方法核对轮廓、刃口状态与关键公差。"],
+        desc: "Material: Tungsten Carbide | Tolerance: ±0.002 mm | Market: Japan",
+        points: ["要求：钨钢冲头具有精细刃口，并按图纸控制 ±0.002 mm 关键公差。", "工艺评估：关键轮廓考虑采用 PG 成型研磨并配合投影检测。", "检验重点：按确认图纸和约定测量方法核对轮廓、刃口状态与关键公差。"],
       },
       {
         tag: "Electronics / Ceramic Pin",
@@ -317,16 +294,17 @@ const content = {
       body: "提前确认图纸、材料、数量、公差和交期信息，可以让我们更快完成加工评估和报价。",
     },
     faqItems: [
-      ["What file formats do you accept?", "We accept PDF, STEP, STP, DWG and DXF files for RFQ review. 2D drawings with tolerances are preferred for final quotation."],
-      ["What is your minimum order quantity?", "Prototype, small-batch and custom orders can be reviewed. MOQ depends on material, process route and inspection requirements."],
-      ["What tolerance can you achieve?", "Typical tolerances depend on material and geometry. Our reference capabilities include oil wire EDM at ±0.001mm and PG grinding projects around ±0.002mm."],
-      ["What is your lead time?", "Lead time depends on drawing complexity, material availability and quantity. RFQ responses are targeted within 24 hours after receiving complete drawings."],
-      ["Can you sign NDA?", "Yes. We can sign NDA agreements for confidential drawings, tooling designs and customer projects."],
-      ["Do you support overseas customers?", "Yes. Jinyi Precision has experience serving international customers across Japan, Southeast Asia, Europe, and North America."],
+      ["接受哪些图纸格式？", "询价评估可接受 PDF、STEP、STP、DWG 和 DXF 文件。正式报价优先提供标注公差的二维图纸。"],
+      ["最小订购量是多少？", "可评估原型、小批量和定制订单。最小订购量取决于材料、加工工艺和检验要求。"],
+      ["可以达到什么加工公差？", "公差取决于零件形状和材料。参考能力包括油线切割 ±0.001 mm，以及 PG 精密研磨参考公差 ±0.002 mm；实际结果取决于加工条件，并在图纸评审时确认。"],
+      ["交期和询价响应时间是多少？", "交期取决于图纸复杂度、材料供应和数量。收到完整图纸后，我们以 24 小时内回复询价为目标。"],
+      ["可以签署保密协议吗？", "可以。我们可针对保密图纸、模具设计和客户项目签署保密协议。"],
+      ["是否服务海外客户？", "是的。Jinyi Precision 具有服务日本、东南亚、欧洲和北美国际客户的经验。"],
     ],
     blog: {
       eyebrow: "Technical Blog",
       title: "精密加工技术文章",
+      allGuides: "查看全部技术指南",
       body: "面向采购、工程和品质团队整理线切割、PG 研磨、超硬与陶瓷零件相关知识。",
     },
     blogCards: [
@@ -373,9 +351,10 @@ const content = {
       tolerance: "关键公差 / 表面要求",
       message: "加工要求",
       upload: "图纸发送说明",
-      note: "提交 RFQ 表单后，请通过 Email 或 WhatsApp 发送 PDF、STEP、STP、DWG 或 DXF 图纸。",
-      submit: "提交 RFQ",
-      whatsappSubmit: "WhatsApp 询价",
+      note: "您可以直接通过邮件发送图纸，无需先提交表单。表单可用于初步咨询，不支持附件上传。",
+      drawingNote: "将打开您的邮件应用。请在邮件中附上 PDF、STEP 或 CAD 图纸。",
+      submit: "发送询价",
+      whatsappSubmit: "WhatsApp 聊天",
       subject: "金一精密询价",
       bodyLabels: ["姓名 / 公司", "联系方式", "材料", "数量", "产品 / 工序", "关键公差 / 表面要求", "加工要求"],
       success: "已收到您的 RFQ 表单。请通过 Email 或 WhatsApp 继续发送图纸，我们会尽快回复。",
@@ -390,9 +369,10 @@ const content = {
     },
   },
   ja: {
-    metaTitle: "精密部品カスタム加工 | ワイヤーカット・PG研削 | 金一精密",
+    metaTitle: "精密部品カスタム加工 | ワイヤーカット・PG研削 | Jinyi Precision",
+    metaDescription: "金型、コネクタ、自動化機器メーカー向けの精密部品、ワイヤーカット、PG研削、超硬・セラミック部品の受託加工。見積依頼に24時間以内で回答。",
     company: {
-      shortName: "金一精密科技",
+      shortName: "Jinyi Precision",
       fullName: "東莞市金一精密科技有限公司",
     },
     nav: {
@@ -403,14 +383,14 @@ const content = {
       products: "製品事例",
       blog: "技術記事",
       contact: "お問い合わせ",
-      quote: "見積依頼",
+      quote: "お問い合わせを送信",
     },
     hero: {
       eyebrow: "精密部品加工メーカー",
       title: "精密部品の高精度カスタム加工",
       lead:
         "高精度研削、細線ワイヤーカット、鏡面放電加工を軸に、コネクタ、精密部品、自動化部品向けの加工に対応します。",
-      primaryCta: "図面で見積依頼",
+      primaryCta: "図面をメールで送る",
       secondaryCta: "加工能力を見る",
       photoMain: "PG成形研削の精密異形部品",
       photoSide: "恒温 EDM 加工現場",
@@ -419,13 +399,13 @@ const content = {
       ["20+ Years", "精密加工経験"],
       ["ISO9001", "品質認証"],
       ["24 Hours", "RFQ 迅速対応"],
-      ["±0.001mm", "油ワイヤー参考公差"],
+      ["±0.001 mm", "油ワイヤー参考公差"],
     ],
     trust: [
-      ["R0.03", "PG 加工の最小 R 参考値"],
-      ["φ0.05-φ0.20", "油 / 水ワイヤー線径範囲"],
-      ["Ra0.05-Ra0.15", "PG 研削面粗度"],
-      ["AD30LS x4", "Sodick 鏡面放電加工設備"],
+      ["図面で検討", "PG最小コーナーR"],
+      ["φ0.05-φ0.20 mm", "油 / 水ワイヤー線径範囲"],
+      ["図面で検討", "PG研削面粗さ"],
+      ["AD30LS", "Sodick 鏡面放電加工設備"],
     ],
     about: {
       eyebrow: "Company Profile",
@@ -450,22 +430,22 @@ const content = {
     capabilityCards: [
       {
         title: "PG プロファイル研削",
-        desc: "日本製 WAIDA CNC プロファイル研削盤により、高精度の異形刃先、パンチ、インサート、超硬精密部品を加工します。",
-        meta: ["WAIDA PGX-2500SP x6", "公差 ±0.002mm", "Ra0.05-Ra0.15"],
+        desc: "日本製 WAIDA CNC プロファイル研削盤により、高精度の異形刃先、パンチ、インサート、超硬精密部品を加工します。 達成可能な結果は、部品形状、材料および加工条件により異なります。",
+        meta: ["WAIDA PGX-2500SP x6", "参考公差 ±0.002 mm", "PG表面粗さは図面で検討"],
       },
       {
         title: "油 / 水ワイヤーカット",
-        desc: "西部電機および AgieCharmilles のワイヤーカット設備で、細線、微小 R、精密輪郭加工に対応します。",
-        meta: ["線径 φ0.05-φ0.20", "水切 ±0.002mm", "油切 ±0.001mm"],
+        desc: "西部電機の水加工・油加工ワイヤ放電加工機で、細線、微小 R、精密輪郭加工に対応します。",
+        meta: ["線径 φ0.05-φ0.20 mm", "水切 ±0.002 mm", "油切 ±0.001 mm"],
       },
       {
         title: "Sodick 鏡面放電",
         desc: "Sodick AD30LS により、微細放電、鏡面放電、複雑な微細形状の加工に対応します。",
-        meta: ["AD30LS x4", "Ra0.13-Ra0.4", "公差 ±0.005"],
+        meta: ["AD30LS", "スチール類 Ra0.4 µm / 超硬 Ra0.13 µm", "公差 ±0.005 mm"],
       },
       {
         title: "研削 / CNC / プレート",
-        desc: "三井ハイテック、Okamoto などの研削設備と機械加工・協力工場により、プレートや治具部品にも対応します。",
+        desc: "精密研削工程 などの研削設備と機械加工・協力工場により、プレートや治具部品にも対応します。",
         meta: ["精密研削", "CNC 成形研削"],
       },
     ],
@@ -483,39 +463,25 @@ const content = {
     ],
     equipment: {
       eyebrow: "Equipment",
-      title: "設備明細と加工パラメータ",
+      title: "確認済み設備と資料記載仕様",
       body:
-        "設備型式、数量、対応サイズ、備考を一覧化し、購買・技術担当者が確認しやすい形で整理しています。",
-      imageOne: "GF / AgieCharmilles ワイヤーカットライン",
-      imageTwo: "Okamoto GRIND-X 精密研削",
+        "現行情報を確認できる設備のみ掲載しています。寸法は会社紹介資料の第9ページに基づき、完成品の最大寸法や有効加工ストロークを保証するものではありません。西部電機の水加工ワイヤ放電加工機は合計8台で、油加工機とは区別しています。",
+      imageOne: "会社紹介資料：放電加工現場写真",
+      imageTwo: "会社紹介資料：精密研削設備写真",
       galleryEyebrow: "Equipment Gallery",
       galleryTitle: "設備写真ギャラリー",
-      galleryBody: "加工工程、現場環境、検査シーンごとに主要設備写真を整理し、設備構成を分かりやすく示します。",
+      galleryBody: "会社紹介資料の写真を工程・現場・検査別に掲載しています。現行設備台帳ではなく、確認済み設備は上表に記載しています。",
     },
-    equipmentColumns: ["NO", "機械設備", "数量", "サイズ", "備考"],
+    equipmentColumns: ["NO", "機械設備", "数量", "資料記載設備仕様", "備考"],
     equipmentRows: [
-      ["1", "WAIDA プロファイル研磨盤 PGX-2500SP", "6", "100mm x 100mm x 150mm", "最小 R0.03、公差 ±0.002mm"],
-      ["2", "西部電機ワイヤカット加工機 MP250S", "1", "250mm x 180mm x 80mm", "線径 φ0.2、最小 R0.12、公差 ±0.002mm"],
-      ["3", "西部電機ワイヤカット加工機 M50A", "5", "500mm x 300mm x 80mm", "線径 φ0.1-φ0.2、最小 R0.065、公差 ±0.002mm"],
-      ["4", "西部電機ワイヤカット加工機 MM50A", "1", "500mm x 300mm x 80mm", "線径 φ0.07-φ0.2、最小 R0.05、公差 ±0.002mm"],
-      ["5", "西部線切割機 M50B", "1", "500mm x 350mm x 80mm", "線径 φ0.1-φ0.2、最小 R0.065、公差 ±0.002mm"],
-      ["6", "西部電機油ワイヤカット加工機 M25LP", "1", "250mm x 250mm x 80mm", "線径 φ0.05-φ0.2、最小 R0.035、公差 ±0.002mm"],
-      ["7", "アジエ油ワイヤカット CUT 2000 OilTech", "2", "350mm x 250mm x 80mm", "線径 φ0.2、最小 R0.12、公差 ±0.001mm"],
-      ["8", "CASTEK 細孔打孔機", "2", "300mm x 200mm x 230mm", "細穴 φ0.3-φ3.0"],
-      ["9", "Sodick 鏡面放電加工機 AD30LS", "4", "320mm x 200mm x 230mm", "スチール類 Ra0.13、超硬 Ra0.4、公差 ±0.005"],
-      ["10", "大友 5S/3S フライス", "2", "900mm x 300mm x 400mm", ""],
-      ["11", "CTEK 型彫り放電加工機 320", "1", "300mm x 200mm x 230mm", "荒放電、公差 ±0.01"],
-      ["12", "CREATOR 型彫り放電加工機 -2", "3", "350mm x 300mm x 260mm", "荒放電、公差 ±0.01"],
-      ["13", "CREATOR 型彫り放電加工機 CR-5C", "1", "300mm x 300mm x 260mm", "荒放電、公差 ±0.01"],
-      ["14", "FANUC マシニングセンター α-D21MiA", "1", "500mm x 400mm x 330mm", "公差 ±0.01"],
-      ["15", "三井ハイテック研削盤 MSG-200MH", "6", "350mm x 150mm x 180mm", "公差 ±0.002"],
-      ["16", "三井ハイテック CNC 研削盤 MSG-460NC", "1", "75mm x 150mm x 50mm", "鏡面加工可能、公差 ±0.002"],
-      ["17", "大同研磨盤 TSG-350", "6", "300mm x 150mm x 170mm", "公差 ±0.002"],
-      ["18", "JOENLIH 研磨盤", "4", "300mm x 150mm x 170mm", "公差 ±0.002"],
-      ["19", "TALIANG CNC 絵図機", "1", "200mm x 160mm", "プロファイル研磨用フィルム作成"],
-      ["20", "レーザ刻印機", "1", "", ""],
-      ["21", "三井治具研磨盤 4GDN", "1", "610mm x 410mm x 135mm", "公差 ±0.001"],
-      ["22", "三井治具研磨盤 300G", "1", "500mm x 300mm x 95mm", "公差 ±0.001"],
+      ["1", "WAIDA プロファイル研磨盤 PGX-2500SP", "6", "100 mm × 100 mm × 150 mm", "参考公差 ±0.002 mm"],
+      ["2", "西部電機水加工ワイヤ放電加工機 MP250S", "1", "250 mm x 180 mm x 80 mm", "線径 φ0.2 mm、最小 R0.12 mm、公差 ±0.002 mm"],
+      ["3", "西部電機水加工ワイヤ放電加工機 M50A", "5", "500 mm x 300 mm x 80 mm", "線径 φ0.1-φ0.2 mm、最小 R0.065 mm、公差 ±0.002 mm"],
+      ["4", "西部電機水加工ワイヤ放電加工機 MM50A", "1", "500 mm x 300 mm x 80 mm", "線径 φ0.07-φ0.2 mm、最小 R0.05 mm、公差 ±0.002 mm"],
+      ["5", "西部線切割機 M50B", "1", "500 mm x 350 mm x 80 mm", "線径 φ0.1-φ0.2 mm、最小 R0.065 mm、公差 ±0.002 mm"],
+      ["6", "西部電機油ワイヤカット加工機 M25LP", "—", "250 mm x 250 mm x 80 mm", "線径 φ0.05-φ0.2 mm、最小 R0.035 mm、公差 ±0.001 mm"],
+      ["9", "Sodick 鏡面放電加工機 AD30LS", "—", "320 mm x 200 mm x 230 mm", "スチール類 Ra0.4 µm、超硬 Ra0.13 µm、公差 ±0.005 mm"],
+      ["CMM", "Hexagon 686 三次元測定機", "—", "—", "自社保有・社内運用"],
     ],
     equipmentGallery: [
       ["PG 研削", "WAIDA PG 加工現場", "CNC プロファイル研削設備により、高精度の異形刃先、パンチ、超硬部品に対応します。", equipmentImages.pgWorkshop],
@@ -523,7 +489,7 @@ const content = {
       ["ワイヤーカット", "西部電機ワイヤーカット設備群", "細線、微小 R、高精度輪郭加工に対応します。", equipmentImages.wireLine],
       ["ワイヤーカット", "油 / 水ワイヤーカット単機", "精密輪郭、狭溝、微細穴位置関連の加工に使用します。", equipmentImages.wireMachine],
       ["鏡面 EDM", "Sodick 鏡面放電加工機", "微細放電、鏡面放電、複雑な型部位加工に対応します。", equipmentImages.sodickEdm],
-      ["精密研削", "三井ハイテック研削設備", "平面、成形、高安定性が必要な精密研削に対応します。", equipmentImages.mitsuiGrinding],
+      ["精密研削", "資料写真：精密研削設備", "平面、成形、高安定性が必要な精密研削に対応します。", equipmentImages.mitsuiGrinding],
       ["CNC 成形研削", "CNC 成形研削加工エリア", "複雑形状、段差、輪郭面の安定加工に使用します。", equipmentImages.cncGrinding],
       ["投影研削", "光学投影研削設備", "小型精密部品の輪郭確認と精密成形加工に使用します。", equipmentImages.opticalGrinding],
       ["協力設備", "協力会社設備概要", "プレート、治具、一部機械加工ニーズを補完する協力体制です。", equipmentImages.partnerEquipment],
@@ -538,17 +504,18 @@ const content = {
       ["検査設備", "投影測定設備", "刃部形状、輪郭、微細特徴の確認に使用します。", equipmentImages.projector],
       ["検査設備", "工具顕微鏡", "穴形状、微細輪郭、局部形状の検査に使用します。", equipmentImages.microscope],
       ["検査設備", "面粗さ測定機", "面粗さ確認と表面状態評価に使用します。", equipmentImages.roughnessTester],
-      ["検査設備", "三次元測定設備", "プレート穴位置、穴ピッチ、空間寸法の検査に使用します。", equipmentImages.cmm],
+      ["検査設備", "高さ測定設備", "検査エリアの高さ測定設備です。", equipmentImages.cmm],
     ],
     quality: {
+      route: "製造設備・工程の多くは社内で対応し、一部工程は外部と連携します。各案件で加工経路、協力先の工程と検査要求を確認します。",
       eyebrow: "Quality Assurance",
       title: "恒温加工と恒温検査で、検証可能な寸法安定性を支えます",
       body:
-        "恒温加工環境、標準化された検査方法、ISO9001:2015 品質認証により、精密部品の寸法安定性を支えます。",
+        "恒温加工環境と標準化された検査方法により、精密部品の寸法安定性を支えます。ISO 9001:2015 の認証範囲は精密金型部品の製造です。金一精密は Hexagon 686 三次元測定機（CMM）を自社で保有・運用し、案件の要求と合意した検査計画に基づいて寸法検査を行います。",
     },
     qualityCards: [
-      ["22°C ±0.5°C 恒温管理", "加工設備を恒温室に設置し、室温による機械変動を抑え、絶対位置精度の安定を目指します。"],
-      ["ISO9001:2015", "寸法測定、精密部品製造、プラスチック成形関連分野で品質マネジメント体制を整備しています。"],
+      ["22°C ±0.5°C 恒温管理", "指定の温度管理加工エリアは 22°C ±0.5°C に維持し、検査室も同じ環境条件に保ちます。工場全体やすべての外注先エリアに適用するものではありません。"],
+      ["ISO9001:2015", "認証範囲：精密金型部品の製造。"],
       ["部位別検査方法", "外径、穴形状、穴ピッチ、直角度、刃部形状、面粗さごとに測定方法を設定しています。"],
     ],
     inspections: [
@@ -572,17 +539,6 @@ const content = {
       ["細線ワイヤー微細部品", "細線加工、狭溝、微小輪郭加工。", sharedImages.smallWire],
       ["成形精密部品", "成形研削部品の例。材質は案件図面に基づき確認します。", sharedImages.tungsten],
     ],
-    blade: {
-      eyebrow: "Micro Blade Capability",
-      title: "製作可能な最小刃幅と刃長範囲",
-    },
-    bladeRows: [
-      ["0.14-0.20mm", "10mm 以内"],
-      ["0.20-0.30mm", "15mm 以内"],
-      ["0.30-0.50mm", "18mm 以内"],
-      ["0.50-1.00mm", "20mm 以内"],
-      ["1.00mm 以上", "30mm 以内"],
-    ],
     materials: {
       eyebrow: "Materials & Coatings",
       title: "日本材から台湾・中国材まで、品質とコストを両立",
@@ -592,8 +548,8 @@ const content = {
     materialCards: [
       ["日本製 超硬材", ["KD10 / KD20 / ME40", "EF05 / EF10 / EF20", "FD15 / FD25 / RD30 / RD50"]],
       ["鋼材", ["SK3 / SKH3 / SKH51", "SKD11 / SKD61", "SUS304 / ASP23 / ASP60"]],
-      ["セラミック材", ["ZKA-901", "NPZ-28", "NPZ-1"]],
-      ["コーティング・代替材", ["PVD / TiAlN", "DLC 0.5μ 以下", "台湾材・中国材対応"]],
+      ["セラミック材", ["ZKA-901", "NPZ-28", "NPZ-1", "Z-KAC901：米国製セラミックの加工事例。ZKA-901とは別に記載"]],
+      ["コーティング・代替材", ["PVD / TiAlN", "DLC 0.5μm 以下", "台湾材・中国材対応"]],
     ],
     caseStudies: {
       eyebrow: "Case Studies",
@@ -604,8 +560,8 @@ const content = {
       {
         tag: "Japan / Connector Punch",
         title: "コネクタ用パンチ",
-        desc: "Material: Tungsten Carbide | Tolerance: ±0.002mm | Market: Japan",
-        points: ["要求：超硬パンチの微細刃先と、図面で指定された ±0.002mm の重要公差。", "工程検討：重要輪郭に PG プロファイル研削と投影検査を適用する工程を検討します。", "検証項目：承認図面と合意した測定方法に基づき、輪郭、刃先状態、重要公差を確認します。"],
+        desc: "Material: Tungsten Carbide | Tolerance: ±0.002 mm | Market: Japan",
+        points: ["要求：超硬パンチの微細刃先と、図面で指定された ±0.002 mm の重要公差。", "工程検討：重要輪郭に PG プロファイル研削と投影検査を適用する工程を検討します。", "検証項目：承認図面と合意した測定方法に基づき、輪郭、刃先状態、重要公差を確認します。"],
       },
       {
         tag: "Electronics / Ceramic Pin",
@@ -626,16 +582,17 @@ const content = {
       body: "図面、材料、数量、公差、納期を事前に共有いただくことで、加工可否と見積をより早く確認できます。",
     },
     faqItems: [
-      ["What file formats do you accept?", "PDF、STEP、STP、DWG、DXF を受け付けています。正式見積には公差入り 2D 図面が最も有効です。"],
-      ["What is your minimum order quantity?", "試作、小ロット、カスタム品を評価できます。MOQ は材料、工程、検査要求により異なります。"],
-      ["What tolerance can you achieve?", "公差は材料と形状により異なります。参考として油ワイヤー EDM は ±0.001mm、PG 研削は ±0.002mm レベルの案件に対応します。"],
-      ["What is your lead time?", "納期は図面難易度、材料、数量により異なります。図面情報が揃っていれば 24 時間以内の RFQ 回答を目標にしています。"],
-      ["Can you sign NDA?", "はい。機密図面、金型設計、顧客プロジェクトに関する NDA 締結に対応できます。"],
-      ["Do you support overseas customers?", "はい。Jinyi Precision は日本、東南アジア、欧州、北米のお客様への対応経験があります。"],
+      ["対応可能な図面形式は何ですか？", "PDF、STEP、STP、DWG、DXF を受け付けています。正式見積には公差入り 2D 図面が最も有効です。"],
+      ["最小注文数量はいくつですか？", "試作、小ロット、カスタム品を評価できます。MOQ は材料、工程、検査要求により異なります。"],
+      ["どの程度の加工公差に対応できますか？", "公差は材料と形状により異なります。参考として油ワイヤー EDM は ±0.001 mm、PG 精密研削の参考公差は ±0.002 mm です。達成可能な結果は加工条件により異なり、図面確認時に合意します。"],
+      ["納期と見積依頼への回答時間を教えてください。", "納期は図面難易度、材料、数量により異なります。図面情報が揃っていれば 24 時間以内の RFQ 回答を目標にしています。"],
+      ["秘密保持契約を締結できますか？", "はい。機密図面、金型設計、顧客プロジェクトに関する NDA 締結に対応できます。"],
+      ["海外のお客様にも対応していますか？", "はい。Jinyi Precision は日本、東南アジア、欧州、北米のお客様への対応経験があります。"],
     ],
     blog: {
       eyebrow: "Technical Blog",
       title: "精密加工に関する技術記事",
+      allGuides: "技術ガイドをすべて見る",
       body: "購買・技術・品質担当者向けに、ワイヤーカット、PG 研削、超硬部品、セラミック部品の基礎情報を整理しています。",
     },
     blogCards: [
@@ -682,9 +639,10 @@ const content = {
       tolerance: "重要公差 / 面要求",
       message: "加工要求",
       upload: "図面送付について",
-      note: "RFQ フォーム送信後、PDF、STEP、STP、DWG、DXF 図面を Email または WhatsApp でお送りください。",
-      submit: "RFQ を送信",
-      whatsappSubmit: "WhatsApp で相談",
+      note: "図面はフォームを送信せずに直接メールでお送りいただけます。フォームは初回のお問い合わせ用で、添付ファイルには対応していません。",
+      drawingNote: "メールアプリが開きます。PDF、STEP または CAD 図面をメールに添付してください。",
+      submit: "お問い合わせを送信",
+      whatsappSubmit: "WhatsApp でチャット",
       subject: "金一精密 見積依頼",
       bodyLabels: ["お名前 / 会社名", "連絡先", "材料", "数量", "製品 / 工程", "重要公差 / 面要求", "加工要求"],
       success: "RFQ フォームを受け付けました。図面は Email または WhatsApp で続けてお送りください。確認後、早急に返信します。",
@@ -700,8 +658,9 @@ const content = {
   },
   en: {
     metaTitle: "Precision Components Manufacturer | Jinyi Precision",
+    metaDescription: "Custom precision components, wire EDM, PG grinding, carbide and ceramic parts for mold, connector and automation manufacturers. 24-hour RFQ response.",
     company: {
-      shortName: "Jinyi Precision Technology",
+      shortName: "Jinyi Precision",
       fullName: "Dongguan Jinyi Precision Technology Co., Ltd.",
     },
     nav: {
@@ -712,15 +671,15 @@ const content = {
       products: "Products",
       blog: "Blog",
       contact: "Contact",
-      quote: "RFQ",
+      quote: "Send an Inquiry",
     },
     hero: {
       eyebrow: "Precision Components Manufacturer",
       title: "Custom Machining for Precision Components",
       lead:
         "Focused on high-precision grinding, fine wire EDM and mirror EDM for connector, precision component and automation customers.",
-      primaryCta: "Send Drawings",
-      secondaryCta: "View Capability",
+      primaryCta: "Email Your Drawings",
+      secondaryCta: "View Capabilities",
       photoMain: "PG profile-ground precision components",
       photoSide: "Temperature-controlled EDM workshop",
     },
@@ -728,26 +687,26 @@ const content = {
       ["20+ Years", "Precision machining experience"],
       ["ISO9001", "Certified quality system"],
       ["24 Hours", "RFQ response"],
-      ["±0.001mm", "Oil wire EDM reference tolerance"],
+      ["±0.001 mm", "Oil wire EDM reference tolerance"],
     ],
     trust: [
-      ["R0.03", "Reference minimum R for PG grinding"],
-      ["φ0.05-φ0.20", "Oil / water wire EDM diameter"],
-      ["Ra0.05-Ra0.15", "PG grinding surface roughness"],
-      ["AD30LS x4", "Sodick mirror EDM equipment"],
+      ["Drawing review", "Minimum corner radius for PG grinding"],
+      ["φ0.05-φ0.20 mm", "Oil / water wire EDM diameter"],
+      ["By drawing", "PG grinding surface finish"],
+      ["AD30LS", "Sodick mirror EDM equipment"],
     ],
     about: {
       eyebrow: "Company Profile",
       title: "A manufacturing system built around accuracy, delivery and stable quality",
       body:
-        "Jinyi Precision focuses on custom precision component machining, especially carbide parts, precision metal components for electronic parts, profile grinding and fine wire EDM. The company values communication with domestic and overseas customers and responds with quality-first and short-lead-time support.",
+        "Jinyi Precision focuses on custom precision component machining, especially carbide parts, precision metal components for electronic parts, profile grinding and fine wire EDM. The company values communication with domestic and overseas customers and focuses on quality, responsive communication and timely delivery.",
     },
     strengths: [
       ["Carbide and electronics experience", "Strong in precision metal components for electronic parts, with carbide, steel and ceramic material support for connectors, precision stamping and automation parts."],
-      ["Accuracy and surface finish focus", "Processing environment, equipment selection and measurement methods are built around dimensional stability, surface roughness and verifiable data."],
-      ["Profile grinding process judgement", "Profile grinding experience supports more reliable process planning for complex forms, micro blade features and carbide components."],
+      ["Dimensional Accuracy and Surface Finish", "Processing environment, equipment selection and measurement methods are built around dimensional stability, surface roughness and verifiable data."],
+      ["Profile Grinding Expertise", "Profile grinding experience supports more reliable process planning for complex forms, miniature blade features and carbide components."],
       ["Coating support", "PVD, TiAlN, DLC, HA and UPC coating options can be selected according to life, friction and film-thickness requirements."],
-      ["Japanese materials and alternatives", "Besides Japanese materials, Taiwan and China alternatives can be selected according to quality and cost targets, with Jinyi responsible for quality assurance."],
+      ["Japanese materials and alternatives", "In addition to Japanese materials, alternatives from Taiwan and China can be selected to meet quality and cost requirements, with Jinyi responsible for quality assurance."],
       ["Internal and partner capacity", "Beyond carbide parts, resin-molding related components, die sets, plates and round parts can be supported through partner factories."],
     ],
     capabilities: {
@@ -759,29 +718,29 @@ const content = {
     capabilityCards: [
       {
         title: "PG Profile Grinding",
-        desc: "Japanese WAIDA CNC profile grinding for high-precision formed edges, punches, inserts and carbide precision components.",
-        meta: ["WAIDA PGX-2500SP x6", "Tolerance ±0.002mm", "Ra0.05-Ra0.15"],
+        desc: "Japanese WAIDA CNC profile grinding for high-precision formed edges, punches, inserts and carbide precision components. Actual achievable results depend on component geometry, material and machining conditions.",
+        meta: ["WAIDA PGX-2500SP x6", "Reference tolerance ±0.002 mm", "PG surface finish reviewed per drawing"],
       },
       {
         title: "Oil / Water Wire EDM",
-        desc: "Seibu and AgieCharmilles wire EDM equipment supports fine wire, small R corners and high-precision contour processing.",
-        meta: ["Wire φ0.05-φ0.20", "Water wire ±0.002mm", "Oil wire ±0.001mm"],
+        desc: "Seibu Electric water-dielectric and oil-dielectric wire EDM support fine-wire cutting and precision contours.",
+        meta: ["Wire φ0.05-φ0.20 mm", "Water wire ±0.002 mm", "Oil wire ±0.001 mm"],
       },
       {
         title: "Sodick Mirror EDM",
         desc: "Sodick AD30LS machines support fine EDM, mirror EDM and complex micro-feature processing.",
-        meta: ["AD30LS x4", "Ra0.13-Ra0.4", "Tolerance ±0.005"],
+        meta: ["AD30LS", "Steel Ra0.4 µm / Tungsten carbide Ra0.13 µm", "Tolerance ±0.005 mm"],
       },
       {
         title: "Grinding / CNC / Plates",
-        desc: "Mitsui High-tec, Okamoto and other grinding equipment, combined with machining and partner resources, support plates and fixture parts.",
+        desc: "Precision grinding, machining and selected partner operations support plates and fixture components.",
         meta: ["Precision grinding", "CNC form grinding"],
       },
     ],
     services: {
       eyebrow: "Core Services",
-      title: "Precision machining pages for international B2B buyers",
-      body: "Service pages are organized by process and part type so purchasing, engineering and quality teams can quickly review scope, materials and RFQ requirements.",
+      title: "Precision Machining Services for Industrial Buyers",
+      body: "Explore our machining services, materials and inspection information to find the right process for your components.",
     },
     serviceLinks: [
       ["Wire EDM Parts", "Fine wire, water wire and oil wire EDM for small R corners, complex contours and high-precision plates.", "wire-edm-parts/"],
@@ -792,39 +751,25 @@ const content = {
     ],
     equipment: {
       eyebrow: "Equipment",
-      title: "Complete Equipment List and Processing Parameters",
+      title: "Confirmed Equipment References",
       body:
-        "Equipment models, quantities, working sizes and notes are organized for quick engineering and purchasing review.",
-      imageOne: "GF / AgieCharmilles wire EDM line",
-      imageTwo: "Okamoto GRIND-X precision grinding",
+        "Only equipment supported by current confirmations is listed. Specifications follow slide 9 of the company presentation; they do not guarantee maximum finished-part dimensions or effective machining travel. The Seibu Electric water-dielectric wire EDM group totals 8 machines and is separate from oil-dielectric wire EDM.",
+      imageOne: "Company presentation: EDM workshop photograph",
+      imageTwo: "Company presentation: precision grinding photograph",
       galleryEyebrow: "Equipment Gallery",
       galleryTitle: "Equipment Photo Gallery",
-      galleryBody: "Key equipment photos are organized by process, workshop environment and inspection scenario for quick review.",
+      galleryBody: "Company presentation photographs illustrate machining and inspection settings. They are not a current equipment inventory; the confirmed equipment references are listed above.",
     },
-    equipmentColumns: ["NO", "Equipment", "Qty.", "Working Size", "Notes"],
+    equipmentColumns: ["NO", "Equipment", "Qty.", "Listed Equipment Specifications", "Notes"],
     equipmentRows: [
-      ["1", "WAIDA profile grinding machine PGX-2500SP", "6", "100mm x 100mm x 150mm", "Min. R0.03, tolerance ±0.002mm"],
-      ["2", "Seibu Electric wire EDM MP250S", "1", "250mm x 180mm x 80mm", "Wire φ0.2, min. R0.12, tolerance ±0.002mm"],
-      ["3", "Seibu Electric wire EDM M50A", "5", "500mm x 300mm x 80mm", "Wire φ0.1-φ0.2, min. R0.065, tolerance ±0.002mm"],
-      ["4", "Seibu Electric wire EDM MM50A", "1", "500mm x 300mm x 80mm", "Wire φ0.07-φ0.2, min. R0.05, tolerance ±0.002mm"],
-      ["5", "Seibu wire-cut machine M50B", "1", "500mm x 350mm x 80mm", "Wire φ0.1-φ0.2, min. R0.065, tolerance ±0.002mm"],
-      ["6", "Seibu Electric oil wire EDM M25LP", "1", "250mm x 250mm x 80mm", "Wire φ0.05-φ0.2, min. R0.035, tolerance ±0.002mm"],
-      ["7", "Agie oil wire EDM CUT 2000 OilTech", "2", "350mm x 250mm x 80mm", "Wire φ0.2, min. R0.12, tolerance ±0.001mm"],
-      ["8", "CASTEK small-hole drilling machine", "2", "300mm x 200mm x 230mm", "Small holes φ0.3-φ3.0"],
-      ["9", "Sodick mirror EDM AD30LS", "4", "320mm x 200mm x 230mm", "Steel Ra0.13, carbide Ra0.4, tolerance ±0.005"],
-      ["10", "Ohtomo 5S/3S milling machine", "2", "900mm x 300mm x 400mm", ""],
-      ["11", "CTEK die-sinking EDM 320", "1", "300mm x 200mm x 230mm", "Rough EDM, tolerance ±0.01"],
-      ["12", "CREATOR die-sinking EDM -2", "3", "350mm x 300mm x 260mm", "Rough EDM, tolerance ±0.01"],
-      ["13", "CREATOR die-sinking EDM CR-5C", "1", "300mm x 300mm x 260mm", "Rough EDM, tolerance ±0.01"],
-      ["14", "FANUC machining center α-D21MiA", "1", "500mm x 400mm x 330mm", "Tolerance ±0.01"],
-      ["15", "Mitsui High-tec grinder MSG-200MH", "6", "350mm x 150mm x 180mm", "Tolerance ±0.002"],
-      ["16", "Mitsui High-tec CNC grinder MSG-460NC", "1", "75mm x 150mm x 50mm", "Mirror finishing available, tolerance ±0.002"],
-      ["17", "Daido grinder TSG-350", "6", "300mm x 150mm x 170mm", "Tolerance ±0.002"],
-      ["18", "JOENLIH grinder", "4", "300mm x 150mm x 170mm", "Tolerance ±0.002"],
-      ["19", "TALIANG CNC plotting machine", "1", "200mm x 160mm", "Profile grinding film preparation"],
-      ["20", "Laser marking machine", "1", "", ""],
-      ["21", "Mitsui jig grinder 4GDN", "1", "610mm x 410mm x 135mm", "Tolerance ±0.001"],
-      ["22", "Mitsui jig grinder 300G", "1", "500mm x 300mm x 95mm", "Tolerance ±0.001"],
+      ["1", "WAIDA profile grinding machine PGX-2500SP", "6", "100 mm × 100 mm × 150 mm", "Reference tolerance ±0.002 mm"],
+      ["2", "Seibu Electric water-dielectric wire EDM MP250S", "1", "250 mm x 180 mm x 80 mm", "Wire φ0.2 mm, min. R0.12 mm, tolerance ±0.002 mm"],
+      ["3", "Seibu Electric water-dielectric wire EDM M50A", "5", "500 mm x 300 mm x 80 mm", "Wire φ0.1-φ0.2 mm, min. R0.065 mm, tolerance ±0.002 mm"],
+      ["4", "Seibu Electric water-dielectric wire EDM MM50A", "1", "500 mm x 300 mm x 80 mm", "Wire φ0.07-φ0.2 mm, min. R0.05 mm, tolerance ±0.002 mm"],
+      ["5", "Seibu Electric water-dielectric wire EDM M50B", "1", "500 mm x 350 mm x 80 mm", "Wire φ0.1-φ0.2 mm, min. R0.065 mm, tolerance ±0.002 mm"],
+      ["6", "Seibu Electric oil-dielectric wire EDM M25LP", "—", "250 mm x 250 mm x 80 mm", "Wire φ0.05-φ0.2 mm, min. R0.035 mm, tolerance ±0.001 mm"],
+      ["9", "Sodick mirror EDM AD30LS", "—", "320 mm x 200 mm x 230 mm", "Steel Ra0.4 µm, tungsten carbide Ra0.13 µm, tolerance ±0.005 mm"],
+      ["CMM", "Hexagon 686 coordinate measuring machine", "—", "—", "Company-owned and operated in-house"],
     ],
     equipmentGallery: [
       ["PG Grinding", "WAIDA PG workshop", "CNC profile grinding equipment supports formed edges, punches and carbide precision components.", equipmentImages.pgWorkshop],
@@ -832,7 +777,7 @@ const content = {
       ["Wire EDM", "Seibu wire EDM equipment line", "Supports fine wire, small R corners and high-precision contour cutting.", equipmentImages.wireLine],
       ["Wire EDM", "Oil / water wire EDM machine", "Used for precision contours, narrow slots and micro feature processing.", equipmentImages.wireMachine],
       ["Mirror EDM", "Sodick mirror EDM machine", "Supports fine EDM, mirror EDM and complex micro-feature processing.", equipmentImages.sodickEdm],
-      ["Precision Grinding", "Mitsui High-tec grinding equipment", "Used for flat grinding, form grinding and stable precision finishing.", equipmentImages.mitsuiGrinding],
+      ["Precision Grinding", "Presentation photograph: precision grinding equipment", "Used for flat grinding, form grinding and stable precision finishing.", equipmentImages.mitsuiGrinding],
       ["CNC Form Grinding", "CNC form grinding area", "Supports complex forms, steps and stable contour surface processing.", equipmentImages.cncGrinding],
       ["Optical Grinding", "Optical projection grinding equipment", "Used for contour checking and precision forming of small components.", equipmentImages.opticalGrinding],
       ["Partner Equipment", "Partner equipment overview", "Additional capacity for plates, fixtures and selected machining requirements.", equipmentImages.partnerEquipment],
@@ -845,24 +790,25 @@ const content = {
       ["Inspection Equipment", "Inspection room overview", "Used for dimensional checking, profile confirmation and final inspection.", equipmentImages.inspectionRoom],
       ["Inspection Equipment", "Height gauge", "Used for height, outer diameter and position-related measurements.", equipmentImages.heightGauge],
       ["Inspection Equipment", "Projection measuring equipment", "Used for blade shape, contour and micro-feature confirmation.", equipmentImages.projector],
-      ["Inspection Equipment", "Tool microscope", "Used for hole profile, fine contour and local feature inspection.", equipmentImages.microscope],
+      ["Inspection Equipment", "Toolmaker’s microscope", "Used for hole profile, fine contour and local feature inspection.", equipmentImages.microscope],
       ["Inspection Equipment", "Surface roughness tester", "Used for surface roughness confirmation and surface condition evaluation.", equipmentImages.roughnessTester],
-      ["Inspection Equipment", "CMM equipment", "Used for plate hole position, pitch and spatial dimension inspection.", equipmentImages.cmm],
+      ["Inspection Equipment", "Height Measurement Equipment", "Height measurement equipment in the inspection area.", equipmentImages.cmm],
     ],
     quality: {
+      route: "Most manufacturing equipment and processes are in-house, with selected external processing. The machining route, partner operations and inspection requirements are confirmed for each project.",
       eyebrow: "Quality Assurance",
       title: "Temperature-controlled processing and inspection for verifiable stability",
       body:
-        "Temperature-controlled processing, standardized inspection methods and ISO9001:2015 certification support dimensional stability for precision components.",
+        "Temperature-controlled processing and standardized inspection methods support dimensional stability for precision components. Our ISO 9001:2015 certification scope is the production of precision mold accessories. Jinyi Precision owns and operates a Hexagon 686 coordinate measuring machine (CMM) in-house. Dimensional inspection follows the project requirements and agreed inspection plan.",
     },
     qualityCards: [
-      ["22°C ±0.5°C control", "Processing equipment is installed in a temperature-controlled room to reduce machine variation caused by room temperature changes."],
-      ["ISO9001:2015", "A quality management system is established for dimensional measurement, precision component manufacturing and plastic molding related fields."],
+      ["22°C ±0.5°C control", "Designated temperature-controlled processing areas are maintained at 22°C ±0.5°C. The inspection room is maintained under the same environmental conditions. This does not describe the entire factory or all external processing areas."],
+      ["ISO9001:2015", "Certification scope: Production of precision mold accessories."],
       ["Inspection by feature", "Outer diameter, hole profile, hole pitch, squareness, blade shape and surface roughness each have defined measurement methods."],
     ],
     inspections: [
       ["Outer diameter / height", "TRIMOS height gauge, Nikon height gauge"],
-      ["Hole profile / blade shape", "Tool microscope, 50x projector, precision micrometer"],
+      ["Hole profile / blade shape", "Toolmaker’s microscope, 50x projector, precision micrometer"],
       ["Plate hole position / pitch", "CMM, projector, height gauge"],
       ["Surface roughness", "Surface roughness tester"],
     ],
@@ -881,17 +827,6 @@ const content = {
       ["Fine Wire-Cut Micro Parts", "Fine wire EDM, narrow slots and micro contour processing.", sharedImages.smallWire],
       ["Formed Precision Parts", "Representative formed grinding components; material is confirmed per project drawing.", sharedImages.tungsten],
     ],
-    blade: {
-      eyebrow: "Micro Blade Capability",
-      title: "Minimum blade size and blade length range",
-    },
-    bladeRows: [
-      ["0.14-0.20mm", "Within 10mm"],
-      ["0.20-0.30mm", "Within 15mm"],
-      ["0.30-0.50mm", "Within 18mm"],
-      ["0.50-1.00mm", "Within 20mm"],
-      ["Over 1.00mm", "Within 30mm"],
-    ],
     materials: {
       eyebrow: "Materials & Coatings",
       title: "Japanese materials plus Taiwan and China alternatives for cost and quality balance",
@@ -901,8 +836,8 @@ const content = {
     materialCards: [
       ["Japanese Carbide", ["KD10 / KD20 / ME40", "EF05 / EF10 / EF20", "FD15 / FD25 / RD30 / RD50"]],
       ["Steels", ["SK3 / SKH3 / SKH51", "SKD11 / SKD61", "SUS304 / ASP23 / ASP60"]],
-      ["Ceramics", ["ZKA-901", "NPZ-28", "NPZ-1"]],
-      ["Coatings & Alternatives", ["PVD / TiAlN", "DLC below 0.5μ", "Taiwan and China materials available"]],
+      ["Ceramics", ["ZKA-901", "NPZ-28", "NPZ-1", "Z-KAC901: U.S.-made ceramic machining example; recorded separately from ZKA-901"]],
+      ["Coatings & Alternatives", ["PVD / TiAlN", "DLC 0.5μm or less", "Taiwan and China materials available"]],
     ],
     caseStudies: {
       eyebrow: "Case Studies",
@@ -913,8 +848,8 @@ const content = {
       {
         tag: "Japan / Connector Punch",
         title: "Connector Punch",
-        desc: "Material: Tungsten Carbide | Tolerance: ±0.002mm | Market: Japan",
-        points: ["Requirement: A tungsten carbide punch with a fine cutting edge and a specified critical tolerance of ±0.002mm.", "Process review: PG profile grinding and optical projection inspection are considered for the critical contour.", "Verification: Confirm the profile, edge condition and specified tolerance against the approved drawing and agreed measurement method."],
+        desc: "Material: Tungsten Carbide | Tolerance: ±0.002 mm | Market: Japan",
+        points: ["Requirement: A tungsten carbide punch with a fine cutting edge and a specified critical tolerance of ±0.002 mm.", "Process review: PG profile grinding and optical projection inspection are considered for the critical contour.", "Verification: Confirm the profile, edge condition and specified tolerance against the approved drawing and agreed measurement method."],
       },
       {
         tag: "Electronics / Ceramic Pin",
@@ -932,19 +867,20 @@ const content = {
     faq: {
       eyebrow: "FAQ",
       title: "Questions from purchasing and engineering teams",
-      body: "Sharing drawings, material, quantity, tolerance and delivery requirements helps us evaluate manufacturability and quotation faster.",
+      body: "Providing drawings, material specifications, quantities, tolerances and delivery requirements helps us assess manufacturability and prepare an accurate quotation.",
     },
     faqItems: [
       ["What file formats do you accept?", "Please send PDF, STEP, STP, DWG or DXF files. For final quotation, 2D drawings with tolerances and inspection datums are preferred."],
       ["What is your minimum order quantity?", "Prototype, small-batch and custom orders can be reviewed. MOQ depends on material, process route and inspection requirements."],
-      ["What tolerance can you achieve?", "Tolerance depends on part geometry and material. Reference capabilities include oil wire EDM at ±0.001mm and PG grinding around ±0.002mm."],
+      ["What tolerance can you achieve?", "Tolerance depends on part geometry and material. Reference capabilities include oil wire EDM at ±0.001 mm and a reference PG precision grinding tolerance of ±0.002 mm. Actual achievable results depend on machining conditions and are confirmed during drawing review."],
       ["What is your lead time?", "Lead time depends on complexity, material and quantity. We target a 24-hour RFQ response after receiving complete drawings."],
-      ["Can you sign NDA?", "Yes. We can sign NDA agreements for confidential drawings, mold designs and customer projects."],
+      ["Can you sign an NDA?", "Yes. We can sign a non-disclosure agreement for confidential drawings, mold designs and customer projects."],
       ["Do you support overseas customers?", "Yes. Jinyi Precision has experience serving international customers across Japan, Southeast Asia, Europe, and North America."],
     ],
     blog: {
       eyebrow: "Technical Blog",
       title: "Precision machining articles for industrial buyers",
+      allGuides: "View All Technical Guides",
       body: "Practical articles for purchasing managers, mechanical engineers and quality engineers evaluating wire EDM, PG grinding, carbide and ceramic components.",
     },
     blogCards: [
@@ -991,12 +927,13 @@ const content = {
       tolerance: "Key Tolerance / Surface Requirement",
       message: "Processing Requirements",
       upload: "Drawing delivery note",
-      note: "Please send PDF, STEP, STP, DWG or DXF drawings by Email or WhatsApp after submitting the RFQ form.",
-      submit: "Submit RFQ",
-      whatsappSubmit: "RFQ by WhatsApp",
+      note: "You can email drawings directly without submitting this form. Use the form for an initial inquiry; it does not accept attachments.",
+      drawingNote: "Opens your email app. Please attach your PDF, STEP or CAD drawings.",
+      submit: "Send an Inquiry",
+      whatsappSubmit: "Chat on WhatsApp",
       subject: "Jinyi Precision RFQ",
       bodyLabels: ["Name / Company", "Contact", "Material", "Quantity", "Product / Process", "Key Tolerance / Surface Requirement", "Processing Requirements"],
-      success: "Thank you. Your RFQ form has been submitted. Please send drawings by Email or WhatsApp, and we will reply as soon as possible.",
+      success: "Thank you. Your inquiry has been submitted. If you would like to add drawings, please email them with your name and drawing number.",
       error: "Submission failed. Please try again or contact us by email / WhatsApp.",
       configuring: "The Formspree form ID is not configured yet. Please replace the form endpoint first.",
     },
@@ -1020,7 +957,6 @@ const selectors = {
   quality: document.querySelector("#quality-cards"),
   inspections: document.querySelector("#inspection-methods"),
   products: document.querySelector("#product-grid"),
-  blade: document.querySelector("#blade-table"),
   materials: document.querySelector("#material-grid"),
   caseStudies: document.querySelector("#case-study-grid"),
   customers: document.querySelector("#customer-list"),
@@ -1030,9 +966,6 @@ const selectors = {
 
 const i18nNodes = [...document.querySelectorAll("[data-i18n]")];
 const languageButtons = [...document.querySelectorAll("[data-lang]")];
-const siteNavLinks = [...document.querySelectorAll(".site-nav a")];
-const rfqForm = document.querySelector("[data-rfq-form]");
-const FORM_TIMEOUT_MS = 15000;
 let currentLanguage = "";
 
 // 【优化说明】统一封装存储、转义和渲染入口，避免重复 DOM 查询，并降低动态 HTML 注入风险。
@@ -1062,6 +995,17 @@ function setTextContent(lang) {
   const dict = content[lang];
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
   document.title = dict.metaTitle;
+  const metadata = {
+    'meta[name="description"]': dict.metaDescription,
+    'meta[property="og:title"]': dict.metaTitle,
+    'meta[property="og:description"]': dict.metaDescription,
+    'meta[property="og:locale"]': { en: "en_US", zh: "zh_CN", ja: "ja_JP" }[lang],
+    'meta[name="twitter:title"]': dict.metaTitle,
+    'meta[name="twitter:description"]': dict.metaDescription,
+  };
+  Object.entries(metadata).forEach(([selector, value]) => {
+    document.querySelector(selector)?.setAttribute("content", value);
+  });
   i18nNodes.forEach((node) => {
     const value = node.dataset.i18n.split(".").reduce((obj, key) => obj?.[key], dict);
     if (typeof value === "string") node.textContent = value;
@@ -1255,17 +1199,6 @@ function renderDynamicContent(lang) {
   );
 
   renderList(
-    selectors.blade,
-    dict.bladeRows,
-    ([size, length]) => `
-      <div class="blade-row">
-        <strong>${escapeHtml(size)}</strong>
-        <span>${escapeHtml(length)}</span>
-      </div>
-    `,
-  );
-
-  renderList(
     selectors.materials,
     dict.materialCards,
     ([title, rows]) => `
@@ -1335,30 +1268,14 @@ function setLanguage(lang, options = {}) {
   languageButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
   });
-  document.querySelector(".menu-button")?.setAttribute(
-    "aria-label",
-    lang === "en" ? "Open navigation" : lang === "ja" ? "ナビゲーションを開く" : "打开导航",
-  );
+  const subject = document.querySelector('[data-rfq-form] [name="_subject"]');
+  if (subject) subject.value = dict.form.subject;
+  document.dispatchEvent(new CustomEvent("jinyi:languagechange", { detail: { lang } }));
   document.querySelector("[data-lightbox-close]")?.setAttribute("aria-label", dict.lightbox.close);
 }
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
-});
-
-const header = document.querySelector(".site-header");
-const menuButton = document.querySelector(".menu-button");
-
-menuButton?.addEventListener("click", () => {
-  const open = header.classList.toggle("is-open");
-  menuButton.setAttribute("aria-expanded", String(open));
-});
-
-siteNavLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    header.classList.remove("is-open");
-    menuButton?.setAttribute("aria-expanded", "false");
-  });
 });
 
 const lightbox = document.querySelector(".image-lightbox");
@@ -1426,61 +1343,6 @@ document.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && lightbox && !lightbox.hidden) {
     closeLightbox();
-  }
-});
-
-rfqForm?.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const lang = currentLanguage || getInitialLanguage();
-  const dict = content[lang];
-  const form = event.currentTarget;
-  const status = form.querySelector("[data-form-status]");
-  const submitButton = form.querySelector('button[type="submit"]');
-  const action = form.getAttribute("action") || FORMSPREE_ENDPOINT;
-
-  if (action.includes("FORM_ID_NOT_CONFIGURED")) {
-    if (status) {
-      status.textContent = dict.form.configuring;
-      status.dataset.state = "error";
-    }
-    return;
-  }
-
-  const formData = new FormData(form);
-  formData.set("_subject", dict.form.subject);
-  // 【优化说明】表单提交增加超时控制，避免网络异常时按钮长期处于不可点击状态。
-  const controller = new AbortController();
-  const timeoutId = window.setTimeout(() => controller.abort(), FORM_TIMEOUT_MS);
-
-  if (submitButton) submitButton.disabled = true;
-  if (status) {
-    status.textContent = "";
-    status.dataset.state = "";
-  }
-
-  try {
-    const response = await fetch(action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-      signal: controller.signal,
-    });
-
-    if (!response.ok) throw new Error(`Formspree responded with ${response.status}`);
-
-    form.reset();
-    if (status) {
-      status.textContent = dict.form.success;
-      status.dataset.state = "success";
-    }
-  } catch (error) {
-    if (status) {
-      status.textContent = dict.form.error;
-      status.dataset.state = "error";
-    }
-  } finally {
-    window.clearTimeout(timeoutId);
-    if (submitButton) submitButton.disabled = false;
   }
 });
 

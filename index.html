@@ -16,7 +16,7 @@
     <!-- 【优化说明】首屏使用体积更小的 WebP，社交分享仍保留原始 PNG。 -->
     <link rel="preload" as="image" href="assets/real-photos/pg-profile-ground-components.webp" fetchpriority="high" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Jinyi Precision Technology" />
+    <meta property="og:site_name" content="Jinyi Precision" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="Precision Components Manufacturer | Jinyi Precision" />
     <meta
@@ -51,7 +51,7 @@
             "telephone": "+86 13515525036",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Room 101, No.11, Xinwei East Seventh Lane, Shixia Village, Dalang Town",
+              "streetAddress": "Room 101, No. 11, Xinwei East Seventh Lane, Shixia Village, Dalang Town",
               "addressLocality": "Dongguan",
               "addressRegion": "Guangdong",
               "addressCountry": "CN"
@@ -68,7 +68,7 @@
             "telephone": "+86 13515525036",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Room 101, No.11, Xinwei East Seventh Lane, Shixia Village, Dalang Town",
+              "streetAddress": "Room 101, No. 11, Xinwei East Seventh Lane, Shixia Village, Dalang Town",
               "addressLocality": "Dongguan",
               "addressRegion": "Guangdong",
               "addressCountry": "CN"
@@ -86,7 +86,7 @@
             "@type": "WebSite",
             "@id": "https://www.jinyiprecision.com/#website",
             "url": "https://www.jinyiprecision.com/",
-            "name": "Jinyi Precision Technology",
+            "name": "Jinyi Precision",
             "publisher": { "@id": "https://www.jinyiprecision.com/#organization" }
           }
         ]
@@ -96,61 +96,37 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Jinyi Precision Technology">
-        <span class="brand-logo">
-          <img src="assets/jinyi-logo.png" alt="Jinyi Precision Technology logo" width="38" height="38" />
-        </span>
-        <span>
-          <strong data-i18n="company.shortName">Jinyi Precision Technology</strong>
-          <small>JINYI PRECISION TECHNOLOGY</small>
-        </span>
-      </a>
-
-      <button class="menu-button" type="button" aria-expanded="false" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Jinyi Precision home"><span class="brand-logo"><img src="assets/jinyi-logo.png" alt="Jinyi Precision logo" width="38" height="38" /></span><span><strong>Jinyi Precision</strong><small>DONGGUAN, CHINA</small></span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#services" data-i18n="nav.services">Services</a>
         <a href="#capabilities" data-i18n="nav.capabilities">Capabilities</a>
         <a href="#quality" data-i18n="nav.quality">Quality</a>
         <a href="#products" data-i18n="nav.products">Products</a>
-        <a href="#blog" data-i18n="nav.blog">Blog</a>
+        <a href="/blog/" data-i18n="nav.blog">Blog</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-
-      <div class="header-actions">
-        <div class="language-switch" aria-label="Language switch">
-          <button type="button" data-lang="zh">中</button>
-          <button type="button" data-lang="ja">日</button>
-          <button type="button" data-lang="en">EN</button>
-        </div>
-        <a class="header-cta" href="#contact" data-i18n="nav.quote">RFQ</a>
-      </div>
+      <div class="header-actions"><div class="language-switch" aria-label="Language switch"><button type="button" data-lang="zh">中</button><button type="button" data-lang="ja">日</button><button type="button" data-lang="en">EN</button></div><a class="header-cta" href="#contact" data-i18n="nav.quote">Send an Inquiry</a></div>
     </header>
 
     <main id="top">
       <section class="hero section">
         <div class="section-inner hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow" data-i18n="hero.eyebrow">Precision Component Manufacturer</p>
-            <h1 data-i18n="hero.title">Custom Precision Component Machining</h1>
-            <p class="hero-lead" data-i18n="hero.lead">
-              High-precision grinding, fine wire EDM and mirror EDM for connector, precision component and automation part buyers.
-            </p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Precision Components Manufacturer</p>
+            <h1 data-i18n="hero.title">Custom Machining for Precision Components</h1>
+            <p class="hero-lead" data-i18n="hero.lead">Focused on high-precision grinding, fine wire EDM and mirror EDM for connector, precision component and automation customers.</p>
             <div class="hero-actions">
-              <a class="button primary" href="#contact" data-i18n="hero.primaryCta">Send RFQ</a>
+              <a class="button primary" href="mailto:yx0205yx@gmail.com" aria-describedby="drawing-email-help-1" data-i18n="hero.primaryCta">Email Your Drawings</a>
               <a class="button secondary" href="#capabilities" data-i18n="hero.secondaryCta">View Capabilities</a>
-            </div>
+            </div><p class="drawing-note" id="drawing-email-help-1" data-i18n="form.drawingNote">Opens your email app. Please attach your PDF, STEP or CAD drawings.</p>
             <!-- 【优化说明】默认英文内容直接写入 HTML，减少首屏 JavaScript 渲染导致的布局偏移。 -->
             <dl class="hero-metrics" id="hero-metrics">
               <div class="metric"><dt>Precision machining experience</dt><dd>20+ Years</dd></div>
               <div class="metric"><dt>Certified quality system</dt><dd>ISO9001</dd></div>
               <div class="metric"><dt>RFQ response</dt><dd>24 Hours</dd></div>
-              <div class="metric"><dt>Oil wire EDM reference tolerance</dt><dd>±0.001mm</dd></div>
+              <div class="metric"><dt>Oil wire EDM reference tolerance</dt><dd>±0.001 mm</dd></div>
             </dl>
           </div>
 
@@ -169,10 +145,10 @@
 
       <section class="trust-bar" aria-label="Key process data">
         <div class="section-inner trust-list" id="trust-list">
-          <div class="trust-item"><strong>R0.03</strong><span>Reference minimum R for PG grinding</span></div>
-          <div class="trust-item"><strong>φ0.05-φ0.20</strong><span>Oil / water wire EDM diameter</span></div>
-          <div class="trust-item"><strong>Ra0.05-Ra0.15</strong><span>PG grinding surface roughness</span></div>
-          <div class="trust-item"><strong>AD30LS x4</strong><span>Sodick mirror EDM equipment</span></div>
+          <div class="trust-item"><strong>Drawing review</strong><span>Minimum corner radius for PG grinding</span></div>
+          <div class="trust-item"><strong>φ0.05-φ0.20 mm</strong><span>Oil / water wire EDM diameter</span></div>
+          <div class="trust-item"><strong>By drawing</strong><span>PG grinding surface finish</span></div>
+          <div class="trust-item"><strong>AD30LS</strong><span>Sodick mirror EDM equipment</span></div>
         </div>
       </section>
 
@@ -180,17 +156,15 @@
         <div class="section-inner split-layout">
           <div class="section-copy">
             <p class="eyebrow" data-i18n="about.eyebrow">Company Profile</p>
-            <h2 data-i18n="about.title">A machining system built around accuracy, lead time and stable quality</h2>
-            <p data-i18n="about.body">
-              Jinyi Precision focuses on custom precision component machining, including carbide parts, precision metal components, PG profile grinding and fine wire EDM.
-            </p>
+            <h2 data-i18n="about.title">A manufacturing system built around accuracy, delivery and stable quality</h2>
+            <p data-i18n="about.body">Jinyi Precision focuses on custom precision component machining, especially carbide parts, precision metal components for electronic parts, profile grinding and fine wire EDM. The company values communication with domestic and overseas customers and focuses on quality, responsive communication and timely delivery.</p>
           </div>
           <div class="strength-grid" id="strength-grid">
             <article class="strength-card"><span class="card-index">01</span><h3>Carbide and electronics experience</h3><p>Strong in precision metal components for electronic parts, with carbide, steel and ceramic material support for connectors, precision stamping and automation parts.</p></article>
-            <article class="strength-card"><span class="card-index">02</span><h3>Accuracy and surface finish focus</h3><p>Processing environment, equipment selection and measurement methods are built around dimensional stability, surface roughness and verifiable data.</p></article>
-            <article class="strength-card"><span class="card-index">03</span><h3>Profile grinding process judgement</h3><p>Profile grinding experience supports more reliable process planning for complex forms, micro blade features and carbide components.</p></article>
+            <article class="strength-card"><span class="card-index">02</span><h3>Dimensional Accuracy and Surface Finish</h3><p>Processing environment, equipment selection and measurement methods are built around dimensional stability, surface roughness and verifiable data.</p></article>
+            <article class="strength-card"><span class="card-index">03</span><h3>Profile Grinding Expertise</h3><p>Profile grinding experience supports more reliable process planning for complex forms, miniature blade features and carbide components.</p></article>
             <article class="strength-card"><span class="card-index">04</span><h3>Coating support</h3><p>PVD, TiAlN, DLC, HA and UPC coating options can be selected according to life, friction and film-thickness requirements.</p></article>
-            <article class="strength-card"><span class="card-index">05</span><h3>Japanese materials and alternatives</h3><p>Besides Japanese materials, Taiwan and China alternatives can be selected according to quality and cost targets, with Jinyi responsible for quality assurance.</p></article>
+            <article class="strength-card"><span class="card-index">05</span><h3>Japanese materials and alternatives</h3><p>In addition to Japanese materials, alternatives from Taiwan and China can be selected to meet quality and cost requirements, with Jinyi responsible for quality assurance.</p></article>
             <article class="strength-card"><span class="card-index">06</span><h3>Internal and partner capacity</h3><p>Beyond carbide parts, resin-molding related components, die sets, plates and round parts can be supported through partner factories.</p></article>
           </div>
         </div>
@@ -200,16 +174,14 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="capabilities.eyebrow">Manufacturing Capability</p>
-            <h2 data-i18n="capabilities.title">Core processes from PG grinding to oil wire EDM</h2>
-            <p data-i18n="capabilities.body">
-              Clear machining capability information for purchasing, engineering and quality teams.
-            </p>
+            <h2 data-i18n="capabilities.title">Core precision component processes from PG grinding to oil wire EDM</h2>
+            <p data-i18n="capabilities.body">Equipment configuration, machining accuracy, surface roughness and workable sizes are presented clearly for RFQ and engineering review.</p>
           </div>
           <div class="capability-grid" id="capability-grid">
-            <article class="capability-card"><div><span class="card-index">01</span><h3>PG Profile Grinding</h3><p>Japanese WAIDA CNC profile grinding for high-precision formed edges, punches, inserts and carbide precision components.</p></div><div class="capability-meta"><span>WAIDA PGX-2500SP x6</span><span>Tolerance ±0.002mm</span><span>Ra0.05-Ra0.15</span></div></article>
-            <article class="capability-card"><div><span class="card-index">02</span><h3>Oil / Water Wire EDM</h3><p>Seibu and AgieCharmilles wire EDM equipment supports fine wire, small R corners and high-precision contour processing.</p></div><div class="capability-meta"><span>Wire φ0.05-φ0.20</span><span>Water wire ±0.002mm</span><span>Oil wire ±0.001mm</span></div></article>
-            <article class="capability-card"><div><span class="card-index">03</span><h3>Sodick Mirror EDM</h3><p>Sodick AD30LS machines support fine EDM, mirror EDM and complex micro-feature processing.</p></div><div class="capability-meta"><span>AD30LS x4</span><span>Ra0.13-Ra0.4</span><span>Tolerance ±0.005</span></div></article>
-            <article class="capability-card"><div><span class="card-index">04</span><h3>Grinding / CNC / Plates</h3><p>Mitsui High-tec, Okamoto and other grinding equipment, combined with machining and partner resources, support plates and fixture parts.</p></div><div class="capability-meta"><span>Precision grinding</span><span>CNC form grinding</span></div></article>
+            <article class="capability-card"><div><span class="card-index">01</span><h3>PG Profile Grinding</h3><p>Japanese WAIDA CNC profile grinding for high-precision formed edges, punches, inserts and carbide precision components. Actual achievable results depend on component geometry, material and machining conditions.</p></div><div class="capability-meta"><span>WAIDA PGX-2500SP x6</span><span>Reference tolerance ±0.002 mm</span><span>PG surface finish reviewed per drawing</span></div></article>
+            <article class="capability-card"><div><span class="card-index">02</span><h3>Oil / Water Wire EDM</h3><p>Seibu Electric water-dielectric and oil-dielectric wire EDM support fine-wire cutting and precision contours.</p></div><div class="capability-meta"><span>Wire φ0.05-φ0.20 mm</span><span>Water wire ±0.002 mm</span><span>Oil wire ±0.001 mm</span></div></article>
+            <article class="capability-card"><div><span class="card-index">03</span><h3>Sodick Mirror EDM</h3><p>Sodick AD30LS machines support fine EDM, mirror EDM and complex micro-feature processing.</p></div><div class="capability-meta"><span>AD30LS</span><span>Steel Ra0.4 µm / Tungsten carbide Ra0.13 µm</span><span>Tolerance ±0.005 mm</span></div></article>
+            <article class="capability-card"><div><span class="card-index">04</span><h3>Grinding / CNC / Plates</h3><p>Precision grinding, machining and selected partner operations support plates and fixture components.</p></div><div class="capability-meta"><span>Precision grinding</span><span>CNC form grinding</span></div></article>
           </div>
         </div>
       </section>
@@ -218,10 +190,8 @@
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="services.eyebrow">Core Services</p>
-            <h2 data-i18n="services.title">Precision component machining pages for international sourcing</h2>
-            <p data-i18n="services.body">
-              Dedicated service pages help buyers review materials, tolerances, equipment and RFQ requirements quickly.
-            </p>
+            <h2 data-i18n="services.title">Precision Machining Services for Industrial Buyers</h2>
+            <p data-i18n="services.body">Explore our machining services, materials and inspection information to find the right process for your components.</p>
           </div>
           <!-- 【优化说明】主要服务链接保留在原始 HTML 中，搜索引擎无需执行 JavaScript 即可发现。 -->
           <div class="service-link-grid" id="service-link-grid">
@@ -239,21 +209,19 @@
           <div>
             <div class="section-heading compact">
               <p class="eyebrow" data-i18n="equipment.eyebrow">Equipment</p>
-              <h2 data-i18n="equipment.title">Main equipment and machining parameters</h2>
-              <p data-i18n="equipment.body">
-                Equipment models, quantities, machining sizes and notes are organized for sourcing and engineering review.
-              </p>
+              <h2 data-i18n="equipment.title">Confirmed Equipment References</h2>
+              <p data-i18n="equipment.body">Only equipment supported by current confirmations is listed. Specifications follow slide 9 of the company presentation; they do not guarantee maximum finished-part dimensions or effective machining travel. The Seibu Electric water-dielectric wire EDM group totals 8 machines and is separate from oil-dielectric wire EDM.</p>
             </div>
             <div class="spec-table" id="equipment-table"></div>
           </div>
           <div class="media-stack">
             <figure class="image-panel tall">
               <img src="assets/real-photos/edm-workshop-overview.webp" alt="EDM workshop overview" width="1706" height="1279" loading="lazy" decoding="async" />
-              <figcaption data-i18n="equipment.imageOne">GF / AgieCharmilles wire EDM line</figcaption>
+              <figcaption data-i18n="equipment.imageOne">Company presentation: EDM workshop photograph</figcaption>
             </figure>
             <figure class="image-panel">
-              <img src="assets/real-photos/okamoto-grinding-machine.webp" alt="Okamoto precision grinding machine" width="1260" height="2720" loading="lazy" decoding="async" />
-              <figcaption data-i18n="equipment.imageTwo">Okamoto GRIND-X precision grinding</figcaption>
+              <img src="assets/real-photos/okamoto-grinding-machine.webp" alt="Precision grinding equipment photographed for the company presentation" width="1260" height="2720" loading="lazy" decoding="async" />
+              <figcaption data-i18n="equipment.imageTwo">Company presentation: precision grinding photograph</figcaption>
             </figure>
           </div>
         </div>
@@ -261,9 +229,7 @@
           <div class="section-heading compact">
             <p class="eyebrow" data-i18n="equipment.galleryEyebrow">Equipment Gallery</p>
             <h2 data-i18n="equipment.galleryTitle">Equipment Photo Gallery</h2>
-            <p data-i18n="equipment.galleryBody">
-              Key equipment photos are organized by process, workshop environment and inspection scenario for quick review.
-            </p>
+            <p data-i18n="equipment.galleryBody">Key equipment photos are organized by process, workshop environment and inspection scenario for quick review.</p>
           </div>
           <div class="equipment-gallery" id="equipment-gallery"></div>
         </div>
@@ -274,10 +240,9 @@
           <div class="section-heading">
             <p class="eyebrow" data-i18n="quality.eyebrow">Quality Assurance</p>
             <h2 data-i18n="quality.title">Temperature-controlled processing and inspection for verifiable stability</h2>
-            <p data-i18n="quality.body">
-              Temperature-controlled processing, standardized inspection methods and ISO9001:2015 certification support dimensional stability for precision components.
-            </p>
+            <p data-i18n="quality.body">Temperature-controlled processing and standardized inspection methods support dimensional stability for precision components. Our ISO 9001:2015 certification scope is the production of precision mold accessories. Jinyi Precision owns and operates a Hexagon 686 coordinate measuring machine (CMM) in-house. Dimensional inspection follows the project requirements and agreed inspection plan.</p>
           </div>
+          <p data-i18n="quality.route">Most manufacturing equipment and processes are in-house, with selected external processing. The machining route, partner operations and inspection requirements are confirmed for each project.</p>
           <div class="quality-layout">
             <div class="quality-cards" id="quality-cards"></div>
           </div>
@@ -290,29 +255,18 @@
           <div class="section-heading">
             <p class="eyebrow" data-i18n="products.eyebrow">Product Examples</p>
             <h2 data-i18n="products.title">Precision components, round pins, ceramics and precision plates</h2>
-            <p data-i18n="products.body">
-              Representative machining examples show supported component types, material ranges and typical application scenarios.
-            </p>
+            <p data-i18n="products.body">Representative machining examples show supported component types, material ranges and typical application scenarios.</p>
           </div>
           <div class="product-grid" id="product-grid"></div>
-          <div class="blade-size-panel">
-            <div>
-              <p class="eyebrow" data-i18n="blade.eyebrow">Micro Blade Capability</p>
-              <h3 data-i18n="blade.title">Minimum blade size and blade length range</h3>
-            </div>
-            <div class="blade-table" id="blade-table"></div>
-          </div>
         </div>
       </section>
 
       <section class="section section-muted" id="materials">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow" data-i18n="materials.eyebrow">Materials & Coatings</p>
+            <p class="eyebrow" data-i18n="materials.eyebrow">Materials &amp; Coatings</p>
             <h2 data-i18n="materials.title">Japanese materials plus Taiwan and China alternatives for cost and quality balance</h2>
-            <p data-i18n="materials.body">
-              Carbide, steel, ceramic and coating options can be selected according to drawings, service life requirements and cost targets.
-            </p>
+            <p data-i18n="materials.body">Carbide, steel, ceramic and coating options can be selected according to drawings, service life requirements and cost targets.</p>
           </div>
           <div class="material-grid" id="material-grid"></div>
         </div>
@@ -323,9 +277,7 @@
           <div class="section-heading">
             <p class="eyebrow" data-i18n="caseStudies.eyebrow">Case Studies</p>
             <h2 data-i18n="caseStudies.title">Representative project scenarios</h2>
-            <p data-i18n="caseStudies.body">
-              Common RFQ scenarios show how Jinyi Precision supports drawing review, process planning, material selection and dimensional inspection.
-            </p>
+            <p data-i18n="caseStudies.body">Common RFQ scenarios show how Jinyi Precision supports drawing review, process planning, material selection and dimensional inspection.</p>
           </div>
           <div class="case-study-grid" id="case-study-grid"></div>
         </div>
@@ -336,9 +288,7 @@
           <div class="section-copy">
             <p class="eyebrow" data-i18n="customers.eyebrow">Customer Experience</p>
             <h2 data-i18n="customers.title">Experience supporting Japanese and international manufacturers</h2>
-            <p data-i18n="customers.body">
-              We support customers in connector, electronic component, precision stamping and precision manufacturing-related fields, with attention to quality, delivery and clear engineering communication.
-            </p>
+            <p data-i18n="customers.body">We support customers in connector, electronic component, precision stamping and precision manufacturing-related fields, with attention to quality, delivery and clear engineering communication.</p>
           </div>
           <div class="customer-list" id="customer-list"></div>
         </div>
@@ -349,9 +299,7 @@
           <div class="section-heading">
             <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
             <h2 data-i18n="faq.title">Questions from purchasing and engineering teams</h2>
-            <p data-i18n="faq.body">
-              Sharing drawings, material, quantity, tolerance and delivery requirements helps us evaluate manufacturability and quotation faster.
-            </p>
+            <p data-i18n="faq.body">Providing drawings, material specifications, quantities, tolerances and delivery requirements helps us assess manufacturability and prepare an accurate quotation.</p>
           </div>
           <div class="faq-list" id="faq-list"></div>
         </div>
@@ -362,9 +310,7 @@
           <div class="section-heading">
             <p class="eyebrow" data-i18n="blog.eyebrow">Technical Blog</p>
             <h2 data-i18n="blog.title">Precision machining articles for industrial buyers</h2>
-            <p data-i18n="blog.body">
-              Practical articles for purchasing managers, mechanical engineers and quality engineers evaluating wire EDM, PG grinding, carbide and ceramic components.
-            </p>
+            <p data-i18n="blog.body">Practical articles for purchasing managers, mechanical engineers and quality engineers evaluating wire EDM, PG grinding, carbide and ceramic components.</p>
           </div>
           <div class="blog-grid" id="blog-grid">
             <a class="blog-card" href="/blog/what-is-wire-edm/"><span>Article</span><h3>What is Wire EDM?</h3><p>Understand wire EDM principles, applications, tolerances and RFQ requirements.</p></a>
@@ -373,6 +319,7 @@
             <a class="blog-card" href="/blog/advantages-of-tungsten-carbide-parts/"><span>Article</span><h3>Advantages of Tungsten Carbide Parts</h3><p>Review wear resistance, service life and tooling benefits of carbide parts.</p></a>
             <a class="blog-card" href="/blog/ceramic-parts-for-precision-manufacturing/"><span>Article</span><h3>Ceramic Parts for Precision Manufacturing</h3><p>Explore ceramic part applications in insulation, wear resistance and precision tooling.</p></a>
           </div>
+          <div class="hero-actions"><a class="button secondary" href="/blog/" data-i18n="blog.allGuides">View All Technical Guides</a></div>
         </div>
       </section>
 
@@ -380,14 +327,12 @@
         <div class="section-inner contact-layout">
           <div class="contact-copy">
             <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
-            <h2 data-i18n="contact.title">Send material and quantity requirements for machining review</h2>
-            <p data-i18n="contact.body">
-              Please share material, quantity, tolerance, surface treatment and delivery requirements for faster evaluation.
-            </p>
+            <h2 data-i18n="contact.title">Send drawings, material and quantity requirements for processing review</h2>
+            <p data-i18n="contact.body">Please share 2D / 3D drawings, material, quantity, tolerance, surface treatment and delivery requirements for faster evaluation.</p>
             <div class="contact-list">
               <a href="mailto:yx0205yx@gmail.com" data-i18n="contact.email">Email: yx0205yx@gmail.com</a>
               <a href="https://wa.me/8613515525036" target="_blank" rel="noreferrer" data-i18n="contact.whatsapp">WhatsApp: +86 13515525036</a>
-              <span data-i18n="contact.address">Address: Room 101, No.11, Xinwei East Seventh Lane, Shixia Village, Dalang Town, Dongguan City, China</span>
+              <span data-i18n="contact.address">Address: Room 101, No. 11, Xinwei East Seventh Lane, Shixia Village, Dalang Town, Dongguan City, Guangdong Province, China</span>
             </div>
           </div>
           <form
@@ -427,13 +372,12 @@
               <span data-i18n="form.message">Processing Requirements</span>
               <textarea name="message" rows="5"></textarea>
             </label>
-            <p class="form-note" data-i18n="form.note">
-              Please send PDF, STEP, STP, DWG or DXF drawings by Email or WhatsApp after submitting the RFQ form.
-            </p>
+            <p class="form-note" data-i18n="form.note">You can email drawings directly without submitting this form. Use the form for an initial inquiry; it does not accept attachments.</p>
             <div class="form-actions">
-              <button class="button primary" type="submit" data-i18n="form.submit">Submit RFQ</button>
-              <a class="button secondary" href="https://wa.me/8613515525036" target="_blank" rel="noreferrer" data-i18n="form.whatsappSubmit">RFQ by WhatsApp</a>
-            </div>
+              <a class="button secondary" href="mailto:yx0205yx@gmail.com" aria-describedby="drawing-email-help-2" data-i18n="hero.primaryCta">Email Your Drawings</a>
+              <button class="button primary" type="submit" data-i18n="form.submit">Send an Inquiry</button>
+              <a class="button secondary channel-whatsapp" href="https://wa.me/8613515525036" target="_blank" rel="noreferrer"><svg class="whatsapp-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.1-4.9A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.1 7.5c.3-.2.6-.1.8.2l1 1.7c.2.3.1.6-.1.8l-.6.6c.7 1.4 1.8 2.5 3.2 3.2l.6-.6c.2-.2.5-.3.8-.1l1.7 1c.3.2.4.5.2.8-.4.8-1 1.2-1.8 1.1-3.6-.5-6.4-3.3-6.9-6.9-.1-.8.3-1.4 1.1-1.8Z"/></svg><span data-i18n="form.whatsappSubmit">Chat on WhatsApp</span></a>
+            </div><p class="drawing-note" id="drawing-email-help-2" data-i18n="form.drawingNote">Opens your email app. Please attach your PDF, STEP or CAD drawings.</p>
             <p class="form-status" data-form-status role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -442,11 +386,8 @@
 
     <footer class="site-footer">
       <div class="section-inner footer-inner">
-        <div>
-          <strong data-i18n="company.fullName">Dongguan Jinyi Precision Technology Co., Ltd.</strong>
-          <p>Dongguan Jinyi Precision Technology Co., Ltd.</p>
-        </div>
-        <p data-i18n="footer.copy">Precision components | PG profile grinding | Wire EDM | Mirror EDM</p>
+        <div><strong>Dongguan Jinyi Precision Technology Co., Ltd.</strong><p>Precision component manufacturing | Wire EDM | PG grinding | Mirror EDM</p></div>
+        <div class="footer-contact"><a href="mailto:yx0205yx@gmail.com">yx0205yx@gmail.com</a><a href="https://wa.me/8613515525036" target="_blank" rel="noreferrer">WhatsApp: +86 13515525036</a><span>Room 101, No. 11, Xinwei East Seventh Lane, Shixia Village, Dalang Town, Dongguan City, Guangdong Province, China</span></div>
       </div>
     </footer>
 
@@ -459,11 +400,12 @@
     </div>
 
     <div class="floating-contact" aria-label="Quick contact buttons">
-      <a href="#contact">RFQ</a>
-      <a href="https://wa.me/8613515525036" target="_blank" rel="noreferrer">WhatsApp</a>
-      <a href="mailto:yx0205yx@gmail.com">Email</a>
+      <a href="#contact" data-i18n="nav.quote">Send an Inquiry</a>
+      <a href="https://wa.me/8613515525036" target="_blank" rel="noreferrer" class="channel-whatsapp"><svg class="whatsapp-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.1-4.9A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.1 7.5c.3-.2.6-.1.8.2l1 1.7c.2.3.1.6-.1.8l-.6.6c.7 1.4 1.8 2.5 3.2 3.2l.6-.6c.2-.2.5-.3.8-.1l1.7 1c.3.2.4.5.2.8-.4.8-1 1.2-1.8 1.1-3.6-.5-6.4-3.3-6.9-6.9-.1-.8.3-1.4 1.1-1.8Z"/></svg><span data-i18n="form.whatsappSubmit">Chat on WhatsApp</span></a>
+      <a href="mailto:yx0205yx@gmail.com" aria-describedby="drawing-email-help-1" data-i18n="hero.primaryCta">Email Your Drawings</a>
     </div>
 
     <script src="script.js" defer></script>
+    <script src="site-ui.js" defer></script>
   </body>
 </html>

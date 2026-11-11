@@ -10,10 +10,10 @@ const files = [
   "styles.css",
   "script.js",
   "lightbox.js",
+  "site-ui.js",
   "robots.txt",
   "sitemap.xml",
   "404.html",
-  "deployment-guide.md",
 ];
 
 const directories = [
