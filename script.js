@@ -177,9 +177,10 @@ const content = {
     ],
     equipment: {
       eyebrow: "Equipment",
-      title: "已确认设备与资料所列规格",
-      body:
-        "仅列示现行已确认的设备资料。尺寸采用公司介绍第9页原文，不代表保证的最大成品尺寸或有效加工行程。西部电机水介质线切割设备合计8台，油介质线切割另列。",
+      title: "先进设备，支持精密制造",
+      body: "我们配备精密研磨、线切割、镜面放电加工及三坐标测量设备，为精密制造提供支持。",
+      bodyTwo: "从复杂轮廓、微细结构到精密模具零部件，我们的设备可支持工具钢、硬质合金及其他工程材料的多种加工需求。",
+      bodyThree: "设备规格仅供参考。实际加工可行性及可达到的公差，须根据零件形状、材料及工艺要求进行评估。",
       imageOne: "Company presentation: EDM workshop photograph",
       imageTwo: "Company presentation: precision grinding photograph",
       galleryEyebrow: "Equipment Gallery",
@@ -465,9 +466,10 @@ const content = {
     ],
     equipment: {
       eyebrow: "Equipment",
-      title: "確認済み設備と資料記載仕様",
-      body:
-        "現行情報を確認できる設備のみ掲載しています。寸法は会社紹介資料の第9ページに基づき、完成品の最大寸法や有効加工ストロークを保証するものではありません。西部電機の水加工ワイヤ放電加工機は合計8台で、油加工機とは区別しています。",
+      title: "精密製造を支える先進設備",
+      body: "精密研削、ワイヤ放電加工、鏡面放電加工、三次元測定の専用設備が、当社の精密製造を支えています。",
+      bodyTwo: "複雑な輪郭や微細形状から精密金型部品まで、工具鋼、超硬合金、その他のエンジニアリング材料におけるさまざまな加工要件に対応する設備を備えています。",
+      bodyThree: "設備仕様は参考情報です。実際の加工可否および達成可能な公差は、部品形状、材質、加工条件に基づき検討します。",
       imageOne: "会社紹介資料：放電加工現場写真",
       imageTwo: "会社紹介資料：精密研削設備写真",
       galleryEyebrow: "Equipment Gallery",
@@ -753,9 +755,10 @@ const content = {
     ],
     equipment: {
       eyebrow: "Equipment",
-      title: "Confirmed Equipment References",
-      body:
-        "Only equipment supported by current confirmations is listed. Specifications follow slide 9 of the company presentation; they do not guarantee maximum finished-part dimensions or effective machining travel. The Seibu Electric water-dielectric wire EDM group totals 8 machines and is separate from oil-dielectric wire EDM.",
+      title: "Advanced Equipment for Precision Manufacturing",
+      body: "Our manufacturing capabilities are supported by dedicated precision grinding, wire EDM, mirror EDM, and coordinate measuring equipment.",
+      bodyTwo: "From intricate profiles and micro-features to precision mold components, our equipment supports a range of machining requirements across tool steel, tungsten carbide, and other engineering materials.",
+      bodyThree: "Equipment specifications are provided for reference. Actual machining feasibility and achievable tolerances are evaluated according to part geometry, material, and process requirements.",
       imageOne: "Company presentation: EDM workshop photograph",
       imageTwo: "Company presentation: precision grinding photograph",
       galleryEyebrow: "Equipment Gallery",
