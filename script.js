@@ -187,15 +187,15 @@ const content = {
       galleryTitle: "设备图片展示",
       galleryBody: "公司介绍资料照片按工艺、现场与检测场景整理，不作为现行设备清单；已确认设备见上表。",
     },
-    equipmentColumns: ["NO", "机械设备", "数量", "资料所列设备规格", "备注"],
+    equipmentColumns: ["NO", "机械设备", "资料所列设备规格", "备注"],
     equipmentRows: [
-      ["1", "WAIDA 轮廓研磨机 PGX-2500SP", "6 台", "100 mm × 100 mm × 150 mm", "参考公差 ±0.002 mm"],
-      ["2", "西部电机水介质线切割加工机 MP250S", "1 台", "250 mm x 180 mm x 80 mm", "线径 φ0.2 mm，最小 R0.12 mm，公差 ±0.002 mm"],
-      ["3", "西部电机水介质线切割加工机 M50A", "5 台", "500 mm x 300 mm x 80 mm", "线径 φ0.1-φ0.2 mm，最小 R0.065 mm，公差 ±0.002 mm"],
-      ["4", "西部电机水介质线切割加工机 MM50A", "1 台", "500 mm x 300 mm x 80 mm", "线径 φ0.07-φ0.2 mm，最小 R0.05 mm，公差 ±0.002 mm"],
-      ["5", "西部电机水介质线切割机 M50B", "1 台", "500 mm x 350 mm x 80 mm", "线径 φ0.1-φ0.2 mm，最小 R0.065 mm，公差 ±0.002 mm"],
-      ["6", "西部电机油线切割加工机 M25LP", "2 台", "250 mm x 250 mm x 80 mm", "线径 φ0.05-φ0.2 mm，最小 R0.035 mm，公差 ±0.001 mm"],
-      ["7", "Sodick 镜面放电加工机 AD30LS", "4 台", "320 mm x 200 mm x 230 mm", "钢材 Ra0.4 µm，超硬 Ra0.13 µm，公差 ±0.005 mm"],
+      ["1", "WAIDA 轮廓研磨机 PGX-2500SP", "100 mm × 100 mm × 150 mm", "参考公差 ±0.002 mm"],
+      ["2", "西部电机水介质线切割加工机 MP250S", "250 mm x 180 mm x 80 mm", "线径 φ0.2 mm，最小 R0.12 mm，公差 ±0.002 mm"],
+      ["3", "西部电机水介质线切割加工机 M50A", "500 mm x 300 mm x 80 mm", "线径 φ0.1-φ0.2 mm，最小 R0.065 mm，公差 ±0.002 mm"],
+      ["4", "西部电机水介质线切割加工机 MM50A", "500 mm x 300 mm x 80 mm", "线径 φ0.07-φ0.2 mm，最小 R0.05 mm，公差 ±0.002 mm"],
+      ["5", "西部电机水介质线切割机 M50B", "500 mm x 350 mm x 80 mm", "线径 φ0.1-φ0.2 mm，最小 R0.065 mm，公差 ±0.002 mm"],
+      ["6", "西部电机油线切割加工机 M25LP", "250 mm x 250 mm x 80 mm", "线径 φ0.05-φ0.2 mm，最小 R0.035 mm，公差 ±0.001 mm"],
+      ["7", "Sodick 镜面放电加工机 AD30LS", "320 mm x 200 mm x 230 mm", "钢材 Ra0.4 µm，超硬 Ra0.13 µm，公差 ±0.005 mm"],
     ],
     equipmentGallery: [
       ["PG 成型研磨", "WAIDA PG 加工现场", "CNC profile grinding 设备用于高精度异形刃口、冲头与超硬零件。", equipmentImages.pgWorkshop],
@@ -476,15 +476,15 @@ const content = {
       galleryTitle: "設備写真ギャラリー",
       galleryBody: "会社紹介資料の写真を工程・現場・検査別に掲載しています。現行設備台帳ではなく、確認済み設備は上表に記載しています。",
     },
-    equipmentColumns: ["NO", "機械設備", "数量", "資料記載設備仕様", "備考"],
+    equipmentColumns: ["NO", "機械設備", "資料記載設備仕様", "備考"],
     equipmentRows: [
-      ["1", "WAIDA プロファイル研磨盤 PGX-2500SP", "6", "100 mm × 100 mm × 150 mm", "参考公差 ±0.002 mm"],
-      ["2", "西部電機水加工ワイヤ放電加工機 MP250S", "1", "250 mm x 180 mm x 80 mm", "線径 φ0.2 mm、最小 R0.12 mm、公差 ±0.002 mm"],
-      ["3", "西部電機水加工ワイヤ放電加工機 M50A", "5", "500 mm x 300 mm x 80 mm", "線径 φ0.1-φ0.2 mm、最小 R0.065 mm、公差 ±0.002 mm"],
-      ["4", "西部電機水加工ワイヤ放電加工機 MM50A", "1", "500 mm x 300 mm x 80 mm", "線径 φ0.07-φ0.2 mm、最小 R0.05 mm、公差 ±0.002 mm"],
-      ["5", "西部線切割機 M50B", "1", "500 mm x 350 mm x 80 mm", "線径 φ0.1-φ0.2 mm、最小 R0.065 mm、公差 ±0.002 mm"],
-      ["6", "西部電機油ワイヤカット加工機 M25LP", "2", "250 mm x 250 mm x 80 mm", "線径 φ0.05-φ0.2 mm、最小 R0.035 mm、公差 ±0.001 mm"],
-      ["7", "Sodick 鏡面放電加工機 AD30LS", "4", "320 mm x 200 mm x 230 mm", "スチール類 Ra0.4 µm、超硬 Ra0.13 µm、公差 ±0.005 mm"],
+      ["1", "WAIDA プロファイル研磨盤 PGX-2500SP", "100 mm × 100 mm × 150 mm", "参考公差 ±0.002 mm"],
+      ["2", "西部電機水加工ワイヤ放電加工機 MP250S", "250 mm x 180 mm x 80 mm", "線径 φ0.2 mm、最小 R0.12 mm、公差 ±0.002 mm"],
+      ["3", "西部電機水加工ワイヤ放電加工機 M50A", "500 mm x 300 mm x 80 mm", "線径 φ0.1-φ0.2 mm、最小 R0.065 mm、公差 ±0.002 mm"],
+      ["4", "西部電機水加工ワイヤ放電加工機 MM50A", "500 mm x 300 mm x 80 mm", "線径 φ0.07-φ0.2 mm、最小 R0.05 mm、公差 ±0.002 mm"],
+      ["5", "西部線切割機 M50B", "500 mm x 350 mm x 80 mm", "線径 φ0.1-φ0.2 mm、最小 R0.065 mm、公差 ±0.002 mm"],
+      ["6", "西部電機油ワイヤカット加工機 M25LP", "250 mm x 250 mm x 80 mm", "線径 φ0.05-φ0.2 mm、最小 R0.035 mm、公差 ±0.001 mm"],
+      ["7", "Sodick 鏡面放電加工機 AD30LS", "320 mm x 200 mm x 230 mm", "スチール類 Ra0.4 µm、超硬 Ra0.13 µm、公差 ±0.005 mm"],
     ],
     equipmentGallery: [
       ["PG 研削", "WAIDA PG 加工現場", "CNC プロファイル研削設備により、高精度の異形刃先、パンチ、超硬部品に対応します。", equipmentImages.pgWorkshop],
@@ -765,15 +765,15 @@ const content = {
       galleryTitle: "Equipment Photo Gallery",
       galleryBody: "Company presentation photographs illustrate machining and inspection settings. They are not a current equipment inventory; the confirmed equipment references are listed above.",
     },
-    equipmentColumns: ["NO", "Equipment", "Qty.", "Listed Equipment Specifications", "Notes"],
+    equipmentColumns: ["NO", "Equipment", "Listed Equipment Specifications", "Notes"],
     equipmentRows: [
-      ["1", "WAIDA profile grinding machine PGX-2500SP", "6", "100 mm × 100 mm × 150 mm", "Reference tolerance ±0.002 mm"],
-      ["2", "Seibu Electric water-dielectric wire EDM MP250S", "1", "250 mm x 180 mm x 80 mm", "Wire φ0.2 mm, min. R0.12 mm, tolerance ±0.002 mm"],
-      ["3", "Seibu Electric water-dielectric wire EDM M50A", "5", "500 mm x 300 mm x 80 mm", "Wire φ0.1-φ0.2 mm, min. R0.065 mm, tolerance ±0.002 mm"],
-      ["4", "Seibu Electric water-dielectric wire EDM MM50A", "1", "500 mm x 300 mm x 80 mm", "Wire φ0.07-φ0.2 mm, min. R0.05 mm, tolerance ±0.002 mm"],
-      ["5", "Seibu Electric water-dielectric wire EDM M50B", "1", "500 mm x 350 mm x 80 mm", "Wire φ0.1-φ0.2 mm, min. R0.065 mm, tolerance ±0.002 mm"],
-      ["6", "Seibu Electric oil-dielectric wire EDM M25LP", "2", "250 mm x 250 mm x 80 mm", "Wire φ0.05-φ0.2 mm, min. R0.035 mm, tolerance ±0.001 mm"],
-      ["7", "Sodick mirror EDM AD30LS", "4", "320 mm x 200 mm x 230 mm", "Steel Ra0.4 µm, tungsten carbide Ra0.13 µm, tolerance ±0.005 mm"],
+      ["1", "WAIDA profile grinding machine PGX-2500SP", "100 mm × 100 mm × 150 mm", "Reference tolerance ±0.002 mm"],
+      ["2", "Seibu Electric water-dielectric wire EDM MP250S", "250 mm x 180 mm x 80 mm", "Wire φ0.2 mm, min. R0.12 mm, tolerance ±0.002 mm"],
+      ["3", "Seibu Electric water-dielectric wire EDM M50A", "500 mm x 300 mm x 80 mm", "Wire φ0.1-φ0.2 mm, min. R0.065 mm, tolerance ±0.002 mm"],
+      ["4", "Seibu Electric water-dielectric wire EDM MM50A", "500 mm x 300 mm x 80 mm", "Wire φ0.07-φ0.2 mm, min. R0.05 mm, tolerance ±0.002 mm"],
+      ["5", "Seibu Electric water-dielectric wire EDM M50B", "500 mm x 350 mm x 80 mm", "Wire φ0.1-φ0.2 mm, min. R0.065 mm, tolerance ±0.002 mm"],
+      ["6", "Seibu Electric oil-dielectric wire EDM M25LP", "250 mm x 250 mm x 80 mm", "Wire φ0.05-φ0.2 mm, min. R0.035 mm, tolerance ±0.001 mm"],
+      ["7", "Sodick mirror EDM AD30LS", "320 mm x 200 mm x 230 mm", "Steel Ra0.4 µm, tungsten carbide Ra0.13 µm, tolerance ±0.005 mm"],
     ],
     equipmentGallery: [
       ["PG Grinding", "WAIDA PG workshop", "CNC profile grinding equipment supports formed edges, punches and carbide precision components.", equipmentImages.pgWorkshop],
@@ -1135,7 +1135,7 @@ function renderDynamicContent(lang) {
             (cell, cellIndex) => `
               <div ${index === 0 ? "" : `data-label="${escapeAttr(dict.equipmentColumns[cellIndex] || "")}"`}>
                 ${
-                  index === 0 || cellIndex < 3
+                  index === 0 || cellIndex < 2
                     ? `<strong>${escapeHtml(cell || "-")}</strong>`
                     : `<span>${escapeHtml(cell || "-")}</span>`
                 }
